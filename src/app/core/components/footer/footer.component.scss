@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Average&display=swap');
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 3em;
+ }
+ 
+ .container--flexbox {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .footer__menu {
+    display: flex;
+    justify-content: left;
+    list-style: none;
+ }
+
+ .footer__menu > li:not(:first-child) {
+    margin: 0 1rem;
+ }
+ .footer__menu > li:first-child {
+    margin-right: 1rem;
+ }
+
+ .footer__item {
+    text-decoration: none;    
+    font-size: 1rem;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    color: #4a4a4a;
+ }

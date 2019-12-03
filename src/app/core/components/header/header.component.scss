@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Average&display=swap');
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box
+}
+
+/* ----------------------------------------
+  RESET
+---------------------------------------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+   display: block;
+}
+
+body {
+   line-height: 1.4;
+}
+
+ol,
+ul {
+   list-style: none;
+}
+
+blockquote,
+q {
+   quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+
+/* ----------------------------------------
+  GLOBAL
+---------------------------------------- */
+
+
+
+/* ----------------------------------------
+  UTILITIES
+---------------------------------------- */
+
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: 0 1rem;
+}
+
+.container--flexbox {
+   padding: 2rem 2rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+.container-search {
+   display: flex;
+   padding-top: 20px;
+   width: 20%;
+   min-width: 200px;
+}
+
+
+
+container--form {
+   display: flex;
+   justify-content: space-between;
+   align-self: center;
+}
+
+/* ----------------------------------------
+  WEB-HEADER
+---------------------------------------- */
+
+.web-header {
+    margin: 0 auto;
+    background-color: transparent;
+    background-color: rgba(255, 161, 144);
+ }
+ 
+ .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+ 
+ }
+ 
+ .navbar__heading {
+    padding: 0 10px 0;
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    color: #4a4a4a;
+    background-color: transparent;
+    font-size: 36px;
+    line-height: 1.6;
+ }
+ 
+ .navbar__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ 
+ .navbar__user-profile {
+    text-decoration: none;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem
+ }
+ 
+ .navbar__user-avatar {
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+ 
+ }
+ 
+ .navbar__user-name {
+    text-decoration: none;
+    padding: 20px 10px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 400;
+    color: #4a4a4a;
+ }
+ 
+ .navbar__user-name:hover {
+    color: #719192;
+ }
+ 
+ .form-group--btn {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .btn--form {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    background-color: #4a4a4a;
+    border-radius: 0;
+ }
+
+ /* ----------------------------------------
+ MODAL
+---------------------------------------- */
+
+/* [role="button"] {
+   display: inline-block;
+    border-radius: 4px; 
+   padding: 20px 10px;
+   font-family: 'Fjalla', cursive;
+   color: #4a4a4a;
+   font-weight: 400;
+   text-decoration: none;
+}
+
+[role="button"]:hover {
+   color: rgba(197, 130, 130, 0.8);
+} */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+ }
+ 
+ .overlay:target {
+    visibility: visible;
+    opacity: 1;
+ }
+ 
+ .close {
+    position: absolute;
+    text-decoration: none;
+    top: 20px;
+    right: 20px;
+ }
+ 
+ .form-legend {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    color: #4a4a4a;
+    font-weight: 400;
+    font-size: 1.5rem;
+ }
+ 
+ .form-fieldset {
+    border: none;
+ }
+ 
+ .signin-popup {
+    position: relative;
+    z-index: 20;
+    margin: 10px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #3c4245;
+    max-width: 500px;
+    height: auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+ }
+ 
+ .form-register {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ 
+ }
+ 
+ .form-group {
+    margin: 10px;
+ }
+ 
+ .form-group--typeclient {
+    display: flex;
+ }
+ 
+ .form-group__label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Fjalla One', sans-serif;
+    color: #4a4a4a;
+    font-weight: 400;
+    font-size: 1.15rem;
+ }
+ 
+ 
+ .form-group__control {
+    font-size: 1rem;
+    padding-left: 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #757575;
+ }
+ 
+ 
+ .form-fieldset--typecustomer {
+    padding: 5px;
+    text-align: center;
+ }
+ 
+ /* ----------------------------------------
+  MAIN
+ ---------------------------------------- */
+ .heading__h1 {
+    padding-top: 125px;
+    padding-bottom: 25px;
+    font-size: 3.875rem;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 400;
+    color: #4a4a4a;
+ }
+ 
+ .heading__h2 {
+    padding-bottom: 25px;
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 400;
+    color: #4a4a4a;
+ }
+ 
+ .heading__h2--bestseller {
+    display: block;
+    padding: 0 3rem;
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+    text-align: left;
+ }
+ 
+ .search__select {
+    padding: 0 auto;
+ }
+ 
+ .custom__select--home {
+    margin: 30px 0 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+ }
+ 
+ .form__title {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 400;
+    color: #4a4a4a;
+ 
+ }
