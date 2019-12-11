@@ -1,0 +1,41 @@
+<!-- <p>pastry-list works!</p>
+<div class="container">
+  <div class="card-deck-wrapper">
+    <div class="card-deck">
+      <app-film *ngFor="let film of films"
+        [pelicula]="film"
+        (borrar)="onBorrarPelicula($event)"
+        (editar)="onEditarPelicula($event)">
+      </app-film>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="card-results">
+  <!--Card Results-->
+
+
+  <div class="card animated fadeIn fast" *ngFor="let therapistCard of therapists; let i = index">
+
+    <div class="card-left">
+      <img class="card-img" [src]="therapistCard.img" [alt]="therapistCard.name">
+    </div>
+    <div class="card-rigth">
+      <div class="card-header">
+        <ul class="contact_information contact_information--card">
+          <span class="starts starts--card">★★☆</span>
+          <h3 class="card-title">{{ therapistCard.name }}</h3>
+          <br>
+          <li class="work">{{ therapistCard.experience }}</li>
+          <li class="address"><a class="address-map" href="#">{{ therapistCard.address }}</a></li>
+          <p class="from">Desde: <span class="money"> {{ therapistCard.price }}</span></p>
+        </ul>
+      </div>
+    </div>
+
+
+    <app-main-album
+  *ngFor="let album of musicService.artistAlbums$ | async"
+  [album]="album"
+  (changeAlbum)="selectAlbum($event)"></app-main-album>
