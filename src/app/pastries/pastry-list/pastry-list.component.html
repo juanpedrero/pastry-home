@@ -1,41 +1,168 @@
-<!-- <p>pastry-list works!</p>
-<div class="container">
-  <div class="card-deck-wrapper">
-    <div class="card-deck">
-      <app-film *ngFor="let film of films"
-        [pelicula]="film"
-        (borrar)="onBorrarPelicula($event)"
-        (editar)="onEditarPelicula($event)">
-      </app-film>
-    </div>
-  </div>
-</div> -->
+<div class="container container--flexbox container--result">
 
+  <div class="container-search">
+    <nav class="filter">
 
-<div class="card-results">
-  <!--Card Results-->
-
-
-  <div class="card animated fadeIn fast" *ngFor="let therapistCard of therapists; let i = index">
-
-    <div class="card-left">
-      <img class="card-img" [src]="therapistCard.img" [alt]="therapistCard.name">
-    </div>
-    <div class="card-rigth">
-      <div class="card-header">
-        <ul class="contact_information contact_information--card">
-          <span class="starts starts--card">★★☆</span>
-          <h3 class="card-title">{{ therapistCard.name }}</h3>
-          <br>
-          <li class="work">{{ therapistCard.experience }}</li>
-          <li class="address"><a class="address-map" href="#">{{ therapistCard.address }}</a></li>
-          <p class="from">Desde: <span class="money"> {{ therapistCard.price }}</span></p>
+      <form for="demo" class="custom__select custom__select--result">
+        <h2 class="filter__title">Tipo de dulce</h2>
+        <ul class="dropdown__list">
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="cake">Tarta</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox2"
+                value="dessert">Postre</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1"
+                value="iceCream">Helado</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1"
+                value="teaBiscuit">Pastas</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1"
+                value="chocolate">Chocolate</label>
+          </li>
         </ul>
+        <h2 class="filter__title">¿Alergías y/o intolerancias?</h2>
+        <ul class="dropdown__list">
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1"
+                value="gluten">Gluten</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox2" value="egg">Huevo</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="nuts">Frutos
+              Secos</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1"
+                value="peanut">Cacahuete</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="soja">Soja</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="milk">Leche</label>
+          </li>
+        </ul>
+        <h2 class="filter__title">Ocasión</h2>
+        <ul class="dropdown__list">
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1"
+                value="birthday">Cumpleaños</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox2" value="wedding">Boda</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="babyShower">Baby
+              Shower</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1"
+                value="firstCommunion">Comunión</label>
+          </li>
+          <li>
+            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="friends">Con
+              Amigos</label>
+          </li>
+        </ul>
+      </form>
+    </nav>
+
+  </div>
+
+
+  <div class="container-card">
+    <div class="container-card-results">
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
       </div>
+
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
+        <div class="card__data">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div>
+
     </div>
 
 
-    <app-main-album
-  *ngFor="let album of musicService.artistAlbums$ | async"
-  [album]="album"
-  (changeAlbum)="selectAlbum($event)"></app-main-album>
+
+  </div>
+</div>

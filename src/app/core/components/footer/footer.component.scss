@@ -3,22 +3,37 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Average&display=swap');
 
+.web-footer{
+  margin: 0 auto;
+background-color: red;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 3em;
  }
- 
+
+
+
+
  .container--flexbox {
     padding: 2rem 2rem;
     display: flex;
     justify-content: space-between;
  }
 
+.nav__footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
  .footer__menu {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     list-style: none;
+
  }
 
  .footer__menu > li:not(:first-child) {
@@ -29,7 +44,7 @@
  }
 
  .footer__item {
-    text-decoration: none;    
+    text-decoration: none;
     font-size: 1rem;
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;

@@ -9,7 +9,13 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+
+ private isShown = false;
+
   ngOnInit() {
   }
 
+  toShow(): void{
+    this.isShown = !(this.isShown);
+  }
 }

@@ -1,18 +1,21 @@
 <header class="web-header">
   <div class="container">
     <nav class="navbar">
-      <span [routerLink]="['/']" class="navbar__heading">PastryHome</span>
+      <a [routerLink]="['/']" class="navbar__heading">PastryHome</a>
       <div class="navbar__user">
-        <a href="#signin" role="button" class="navbar__user-name">Sign in</a>
-        <a href="#login" role="button" class="navbar__user-name">Login</a>
+        <!-- <button type="button" class="navbar__user-name" href="#signin"
+        (click)="toShow()">Signup</button> -->
+
+        <a (click)="toShow()" href="#signin" role="button" class="navbar__user-name">Sign in</a>
+        <a (click)="toShow()" href="#login" role="button" class="navbar__user-name">Login</a>
       </div>
     </nav>
 
     <!-- /* Modal */ -->
 
-    <div id="signin" class="overlay">
+    <div *ngIf="isShown" [ngClass]= "{'overlay-isShown':isShown}" id="signin" class="overlay">
       <div class="signin-popup">
-        <a href="#" class="close">&times;</a>
+        <a (click)="toShow()" href="#" class="close">&times;</a>
         <form action="..." method="...">
           <fieldset class="form-fieldset form-fieldset--personaldata">
             <legend class="form-legend">Sign in</legend>
@@ -41,13 +44,13 @@
           </fieldset>
           <fieldset class="form-fieldset form-fieldset--typecustomer">
             <legend class="form-legend">¿Qué tipo de usuario eres?</legend>
-            <div class="form-register">
+            <div class=" form-register--typeclient">
               <div class="form-group form-group--typeclient">
-                <input class="form-group__control" type="radio" id="r-01" name="typeclient">
-                <label class="form-group__label" for="r-01">Customer</label>
+                <input class="form-group__control form-group__control--typeclient" type="radio" id="r-01" name="typeclient">
+                <label class="form-group__label " for="r-01">Customer</label>
               </div>
               <div class="form-group form-group--typeclient">
-                <input class="form-group__control" type="radio" id="r-02" name="typeclient">
+                <input class="form-group__control form-group__control--typeclient" type="radio" id="r-02" name="typeclient">
                 <label class="form-group__label" for="r-02">Baker</label>
               </div>
             </div>
@@ -60,3 +63,41 @@
     </div>
   </div>
 </header>
+
+
+
+<!-- //// LOGIN ///// -->
+<div *ngIf="isShown" [ngClass]= "{'login-isShown':isShown}"  class="login" id="login">
+
+  <form class="form">
+      <h4>LOGIN</h4>
+      <div class="form-group">
+          <label class="form-group__label" for="email">Email address</label>
+          <input type="email" class="form-group__control" id="email" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+          <label class="form-group__label" for="password">Password</label>
+          <input type="password" class="form-group__control" id="password">
+      </div>
+      <button type="submit" class="btn btn--form">Submit</button>
+  </form>
+  <a (click)="toShow()" href="#" class="close">&times;</a>
+</div>
+
+<!-- ////// Menu USER/////
+
+<div id="dropdown-user" class="dropdown-user">
+  <a [routerLink]="['/profile']" class="dropdown-login__link">Mi Perfil</a>
+  <a [routerLink]="['/orders']" class="dropdown-login__link">Mis pedidos</a>
+  <a [routerLink]="['/favorites']" class="dropdown-login__link">Mis favoritos</a>
+  <button type="button" class="dropdown-login__link dropdown-login__btn" (click)="logout()">Cerrar sesión</button>
+</div>
+
+
+////// Menu Baker/////
+
+<div id="dropdown-baker" class="dropdown-baker">
+  <a [routerLink]="['/profile']" class="dropdown-login__link">Mi Perfil</a>
+  <a [routerLink]="['/orders']" class="dropdown-login__link">Mis creaciones</a>
+  <button type="button" class="dropdown-login__link dropdown-login__btn" (click)="logout()">Cerrar sesión</button>
+</div> -->

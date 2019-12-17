@@ -8,7 +8,12 @@ import { Pastry } from '../types/pastry';
 export class PastryService {
 
   public selectedPastry$ = new BehaviorSubject<Pastry>({
-
+    img: 'string',
+    namePastry: 'string',
+    nameAuthor: 'string',
+    description: 'string',
+    rating: 'string',
+    price: 7,
   })
 
   public selected

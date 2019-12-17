@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Average&display=swap');
+
+
+.wrap {
+  margin-top: 3rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3em;
+}
+
+.img--product {
+  width: rem(662px);
+  height: rem(511px);
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 2rem;
+
+  &__title {
+    margin-bottom: 1rem;
+
+    &-header{
+      font: 1.5rem "Fjalla One", sans-serif;
+    }
+
+    &-tag {
+      margin-top: 0.8rem;
+      font: 1rem "Average", sans-serif;
+    }
+  }
+
+  &__description {
+
+    &-tag {
+          font: 1rem "Average", sans-serif;
+    }
+  }
+}
+
+.price {
+  margin-right: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4a4a4a;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0 2rem;
+}
+
+.btn{
+
+  &--add{
+    cursor: pointer;
+    background-color: #4a4a4a;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0 2rem;
+  }
+}

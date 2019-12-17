@@ -3,7 +3,7 @@ import { Pastry } from '../types/pastry';
 
 export const Pastries: Pastry[] = [
   {
-    img: "string",
+    img: '../assets/images/carlota.jpg',
     namePastry: "string",
     nameAuthor: "string",
     description: "string",

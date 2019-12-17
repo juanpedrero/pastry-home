@@ -1,3 +1,6 @@
+// @import './scss/styles';
+
+
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
@@ -194,14 +197,15 @@ container--form {
    justify-content: center;
    border: 0;
    min-height: 2.5rem;
-   border-radius: 8px;
-   padding: 0 15px;
+  //  border-radius: 0.5rem;
+   padding: 0 1rem;
    cursor: pointer;
    background-color: #4a90e2;
    color: #fff;
    font-size: 1rem;
    text-align: center;
-}
+   font-family: 'Fjalla One', serif;
+  }
 
 .btn--user-menu {
    background-color: transparent;
@@ -329,95 +333,96 @@ container--form {
    color: rgba(197, 130, 130, 0.8);
 } */
 
-.overlay {
-   position: fixed;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   z-index: 10;
-   background: rgba(0, 0, 0, 0.6);
-   transition: opacity 200ms;
-   visibility: hidden;
-   opacity: 0;
-}
+// .overlay {
+//    position: fixed;
+//    top: 0;
+//    bottom: 0;
+//    left: 0;
+//    right: 0;
+//    z-index: 10;
+//    background: rgba(0, 0, 0, 0.6);
+//    transition: opacity 200ms;
+//    visibility: hidden;
+//    opacity: 0;
+// }
 
-.overlay:target {
-   visibility: visible;
-   opacity: 1;
-}
+// .overlay:target {
+//    visibility: visible;
+//    opacity: 1;
+// }
 
-.close {
-   position: absolute;
-   text-decoration: none;
-   top: 20px;
-   right: 20px;
-}
+// .close {
+//    position: absolute;
+//    text-decoration: none;
+//    top: 20px;
+//    right: 20px;
+// }
 
-.form-legend {
-   padding: 20px;
-   text-align: center;
-   font-family: 'Fjalla One', sans-serif;
-   color: #4a4a4a;
-   font-weight: 400;
-   font-size: 1.5rem;
-}
+// .form-legend {
+//    padding: 20px;
+//    text-align: center;
+//    font-family: 'Fjalla One', sans-serif;
+//    color: #4a4a4a;
+//    font-weight: 400;
+//    font-size: 1.5rem;
+// }
 
-.form-fieldset {
-   border: none;
-}
+// .form-fieldset {
+//    border: none;
+// }
 
-.signin-popup {
-   position: relative;
-   z-index: 20;
-   margin: 10px auto;
-   padding: 20px;
-   background: #fff;
-   border: 1px solid #3c4245;
-   max-width: 500px;
-   height: auto;
-   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-}
+// .signin-popup {
+//    position: relative;
+//    z-index: 20;
+//    margin: 100px auto;
+//    padding: 20px;
+//    background: #fff;
+//    border: 1px solid #3c4245;
+//    max-width: 500px;
+//    height: auto;
+//    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+//    border-radius: 10px;
+// }
 
-.form-register {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
+// .form-register {
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-between;
 
-}
+// }
 
-.form-group {
-   margin: 10px;
-}
+// .form-group {
+//    margin: 10px;
+// }
 
-.form-group--typeclient {
-   display: flex;
-}
+// .form-group--typeclient {
+//    display: flex;
+// }
 
-.form-group__label {
-   display: block;
-   margin-bottom: 10px;
-   font-family: 'Fjalla One', sans-serif;
-   color: #4a4a4a;
-   font-weight: 400;
-   font-size: 1.15rem;
-}
-
-
-.form-group__control {
-   font-size: 1rem;
-   padding-left: 5px;
-   display: block;
-   width: 200px;
-   border: none;
-   border-bottom: 1px solid #757575;
-}
+// .form-group__label {
+//    display: block;
+//    margin-bottom: 10px;
+//    font-family: 'Fjalla One', sans-serif;
+//    color: #4a4a4a;
+//    font-weight: 400;
+//    font-size: 1.15rem;
+// }
 
 
-.form-fieldset--typecustomer {
-   padding: 5px;
-   text-align: center;
-}
+// .form-group__control {
+//    font-size: 1rem;
+//    padding-left: 5px;
+//    display: block;
+//    width: 200px;
+//    border: none;
+//    border-bottom: 1px solid #757575;
+// }
+
+
+// .form-fieldset--typecustomer {
+//    padding: 5px;
+//    text-align: center;
+// }
 
 /* ----------------------------------------
  MAIN
