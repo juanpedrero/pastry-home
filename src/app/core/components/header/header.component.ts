@@ -9,10 +9,16 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-
- private isShown = false;
+  private isLogged = true;
+  private isShown = false;
 
   ngOnInit() {
+  }
+
+  toLog(): boolean{
+    if (localStorage.getItem('user')) {
+      return true;
+    }
   }
 
   toShow(): void{

@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './modals/components/login/login.component';
-import { SigninComponent } from './modals/components/signin/signin.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const COMPONENTS = [
-  LoginComponent,
-  SigninComponent
+  CartComponent
 ]
 
 

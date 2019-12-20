@@ -5,13 +5,12 @@
 
 .web-footer{
   margin: 0 auto;
-background-color: red;
 }
 
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 3em;
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: 0 2rem;
  }
 
 
@@ -24,14 +23,13 @@ background-color: red;
  }
 
 .nav__footer{
-  position: fixed;
   bottom: 0px;
   width: 100%;
 }
 
  .footer__menu {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     list-style: none;
 
  }
