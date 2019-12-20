@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PastryListComponent } from './pastries/pastry-list/pastry-list.component';
-import { PastryCardComponent } from './pastries/pastry-card/pastry-card.component';
+import { PastryCardComponent } from './pastry-card/pastry-card.component';
 import { PastryDetailComponent } from './pastries/pastry-detail/pastry-detail.component';
 import { CoreModule } from './core/core.module';
 import { BakerComponent } from './profiles/baker/baker.component';
@@ -16,6 +16,9 @@ import { ProfilesModule } from './profiles/profiles.module';
 import { NavbarHomeComponent } from './navbars/components/navbar-home/navbar-home.component';
 import { NavbarSideComponent } from './navbars/components/navbar-side/navbar-side.component';
 import { CartComponent } from './shared/cart/cart.component';
+import { CategoryListComponent } from './category-list/category-list.component';
+import { StarRatingModule } from 'angular-star-rating';
+
 
 @NgModule({
   declarations: [
@@ -29,14 +32,15 @@ import { CartComponent } from './shared/cart/cart.component';
     NavbarHomeComponent,
     NavbarSideComponent,
     CartComponent,
+    CategoryListComponent,
   ],
   imports: [
     CoreModule,
     BrowserModule,
     AppRoutingModule,
    // ModalsModule,
-    ProfilesModule
-
+    ProfilesModule,
+    StarRatingModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

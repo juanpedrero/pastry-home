@@ -77,92 +77,10 @@
 
   </div>
 
-
+  <h2>{{categoryName}}</h2>
   <div class="container-card">
     <div class="container-card-results">
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card__image" src="../../assets/img/avatar.jpg" alt="Avatar">
-        <div class="card__data">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-
+     <app-pastry-card *ngFor="let pastry of pastryList" [pastry]="pastry"></app-pastry-card>
     </div>
-
-
-
   </div>
 </div>

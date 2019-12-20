@@ -1,8 +1,14 @@
+import { Author } from './author';
+
 export interface Pastry {
-  img: string,
-  namePastry: string;
-  nameAuthor: string;
+  id: number;
+  img: string;
+  name: string;
+  idAuthor: number;
   description: string;
-  rating: string;
-  price: number,
+  rating: number;
+  price: number;
+  categories: string[];
+  ingredients: string[];
+  author?: Author;
 };

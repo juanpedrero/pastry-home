@@ -1,76 +1,40 @@
+<div *ngIf="pastry">
 <div class="wrap">
   <div class="container container--flexbox">
-    <img class="img--product" src="../../../assets/images/churros.jpg" alt="Avatar">
+    <img class="img--product" [src]="pastry.img" alt="Avatar">
     <div class="product">
       <section class="product__title">
-        <h1 class="product__title-header">Churros de arroz</h1>
+        <h1 class="product__title-header">{{pastry.name}}</h1>
         <div class="product__title-chips">
-          <span routerLink="/product/result" class="chip__name">Sin gluten</span>
-          <span routerLink="/product/result" class="chip__name">Vegano</span>
-          <span routerLink="/product/result" class="chip__name">Chocolate</span>
+          <span *ngFor="let category of pastry.categories" [routerLink]="['/category', category.toLowerCase()]" class="chip__name">{{category}}</span>
         </div>
       </section>
 
       <section class="product__description">
-        <p class="product__description-tag"> Masa compuesta por harina, agua, y sal. Una vez hecha la masa, esta se
-          coloca en un aparato cilíndrico similar a una manga pastelera y se empuja con un pistón sobre una boquilla por
-          donde sale mediante extrusión, y con sección trasversal en forma de estrella. Finalmente, se fríen en aceite y
-          una vez hechos, a veces, se rebozan en azúcar.</p>
+        <p class="product__description-tag">{{pastry.description}}</p>
       </section>
       <section class="product__author">
-        <img [routerLink]="['/baker']" src="../assets/images/avatar.jpg" alt="" class="author-pic">
+        <img [routerLink]="['/baker', pastry.author.id]" [src]="pastry.author.img" alt="" class="author-pic">
         <div class="author">
           <p class="author-by">Creado por:</p>
-          <p class="author-name">Pepito Flores</p>
+          <p class="author-name">{{pastry.author.name}}</p>
         </div>
       </section>
 
     </div>
     <div class="product__price">
       <section >
-        <span class="btn price">6,35€</span>
+        <span class="btn price">{{pastry.price}}€</span>
         <button class="btn btn--add">Añadir</button>
       </section>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="pastry.ingredients">
   <div class="container container--ingredients">
     <p>INGREDIENTES</p>
-    <p>Ternera (32%), patatas rústicas y salsa blanquette (maicena, mantequilla, nata, sal, pimienta negra, zanahoria, puerro, tomillo, laurel, aceite de oliva, caldo de ternera, setas salteadas, sofrito de cebolla, ajo asado, vino blanco, jugo tsukudani (agua, Shitake seco, salsa de soja, azúcar blanco, vinagre de arroz, sal y vinagre de Jerez)). Gluten, soja, lácteos y apio.</p>
-  </div>
+    <p><span *ngFor="let ingredient of pastry.ingredients">{{ingredient}}</span>
+    </div>
 </div>
-
-<div class="container">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
 </div>

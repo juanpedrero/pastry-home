@@ -1,0 +1,26 @@
+<div>
+  <a class="card-link"[routerLink]="['/product', pastry.id]">
+    <div class="card">
+      <!-- <div class="card__image" [ngStyle]="{background-img: 'url('../assets/images/brazo_navidad.jpg')'}"></div> -->
+      <img class="card__image" src="{{pastry.img}}" alt="Avatar">
+      <div class="card__info">
+        <h4 class="card__info-pastry">{{pastry.name}}</h4>
+        <div class="card__info-baker">
+          <h5 class="baker__name">{{pastry.author.name}}</h5>
+          <div class="media__rating card__info-rating baker__rating">
+            <star-rating
+            [starType]="'svg'"
+            [rating]="pastry.rating"
+            [labelPosition]="'left'"
+            [labelText]="pastry.rating"
+            [staticColor]="'ok'"
+            [size]="'medium'"
+            [readOnly]="'true'"
+            >
+          </star-rating>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
