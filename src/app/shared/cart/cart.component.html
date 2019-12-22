@@ -4,33 +4,19 @@
   </div>
   <div class="open productlist sc-fYxtnH eGTzqC open">
     <div class="pointer see-product flex">
-      <p>Platos</p><span>(2 platos)</span>
+      <p>Platos</p><span>({{cartList.length}} platos)</span>
     </div>
     <ul>
-      <li style="transform: translate3d(0px, 0px, 0px); opacity: 1;">
+      <li style="transform: translate3d(0px, 0px, 0px); opacity: 1;" *ngFor="let product of productList; let i = index">
         <div class="sc-htpNat boBzQr">
-          <div class="img-product"><img src="/images/products/262/catalog/curry-panang-de-ternera_A.jpg"
-              alt="Curry panang de ternera"></div>
+          <div class="img-product"><img [src]="product.img"
+              [alt]="product.name"></div>
           <div class="content-product">
-            <p class="title-product">Curry panang de ternera</p>
-            <p class="price-product">6,45€</p>
+            <p class="title-product">{{product.name}}</p>
+            <p class="price-product">{{product.price}}</p>
             <div class="split product-add flex sc-bwzfXH eOkIfK"><button class="less icon-less"></button>
               <div class="number-product">1</div><button class="more icon-more"></button>
-            </div><button class="delete-btn">eliminar</button>
-          </div>
-        </div>
-      </li>
-      <li style="transform: translate3d(0px, 0px, 0px); opacity: 1;">
-        <div class="sc-htpNat boBzQr">
-          <div class="img-product"><img
-              src="/images/products/534/catalog/pechuga-de-pollo-a-la-brasa-con-piquillos-asados_A.jpg"
-              alt="Pechuga de pollo a la brasa con piquillos asados"></div>
-          <div class="content-product">
-            <p class="title-product">Pechuga de pollo a la brasa con piquillos asados</p>
-            <p class="price-product">6,45€</p>
-            <div class="split product-add flex sc-bwzfXH eOkIfK"><button class="less icon-less"></button>
-              <div class="number-product">1</div><button class="more icon-more"></button>
-            </div><button class="delete-btn">eliminar</button>
+            </div><button class="delete-btn" (click)="removeProduct(i)">eliminar</button>
           </div>
         </div>
       </li>

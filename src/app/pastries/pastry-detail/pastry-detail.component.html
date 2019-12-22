@@ -1,40 +1,41 @@
 <div *ngIf="pastry">
-<div class="wrap">
-  <div class="container container--flexbox">
-    <img class="img--product" [src]="pastry.img" alt="Avatar">
-    <div class="product">
-      <section class="product__title">
-        <h1 class="product__title-header">{{pastry.name}}</h1>
-        <div class="product__title-chips">
-          <span *ngFor="let category of pastry.categories" [routerLink]="['/category', category.toLowerCase()]" class="chip__name">{{category}}</span>
-        </div>
-      </section>
+  <div class="wrap">
+    <div class="container container--flexbox">
+      <img class="img--product" [src]="pastry.img" alt="Avatar">
+      <div class="product">
+        <section class="product__title">
+          <h1 class="product__title-header">{{pastry.name}}</h1>
+          <div class="product__title-chips">
+            <span *ngFor="let category of pastry.categories" [routerLink]="['/category', category.toLowerCase()]"
+              class="chip__name">{{category}}</span>
+          </div>
+        </section>
 
-      <section class="product__description">
-        <p class="product__description-tag">{{pastry.description}}</p>
-      </section>
-      <section class="product__author">
-        <img [routerLink]="['/baker', pastry.author.id]" [src]="pastry.author.img" alt="" class="author-pic">
-        <div class="author">
-          <p class="author-by">Creado por:</p>
-          <p class="author-name">{{pastry.author.name}}</p>
-        </div>
-      </section>
+        <section class="product__description">
+          <p class="product__description-tag">{{pastry.description}}</p>
+        </section>
+        <section class="product__author">
+          <img [routerLink]="['/baker', pastry.author.id]" [src]="pastry.author.img" alt="" class="author-pic">
+          <div class="author">
+            <p class="author-by">Creado por:</p>
+            <p class="author-name">{{pastry.author.name}}</p>
+          </div>
+        </section>
 
-    </div>
-    <div class="product__price">
-      <section >
-        <span class="btn price">{{pastry.price}}€</span>
-        <button class="btn btn--add">Añadir</button>
-      </section>
+      </div>
+      <div class="product__price">
+        <section>
+          <span class="btn price">{{pastry.price}}€</span>
+          <button class="btn btn--add">Añadir</button>
+        </section>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container" *ngIf="pastry.ingredients">
-  <div class="container container--ingredients">
-    <p>INGREDIENTES</p>
-    <p><span *ngFor="let ingredient of pastry.ingredients">{{ingredient}}</span>
+  <div class="container" *ngIf="pastry.ingredients">
+    <div class="container container--ingredients">
+      <p>INGREDIENTES</p>
+      <p><span *ngFor="let ingredient of pastry.ingredients">{{ingredient}}</span>
     </div>
-</div>
+  </div>
 </div>
