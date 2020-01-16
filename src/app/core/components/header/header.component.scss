@@ -1,3 +1,6 @@
+// partials
+@import '../../../styles/partials/variables.scss';
+
 /* ----------------------------------------
   WEB-HEADER
 ---------------------------------------- */
@@ -6,7 +9,8 @@
   margin: 0 auto;
   background-color: transparent;
   padding: 0 35px 0 15px;
-  background-color: rgba(255, 161, 144, 1);
+  //background-color: rgba(255, 161, 144, 1);
+  background-color: $primary-color;
 }
 
 .navbar {
@@ -20,7 +24,7 @@
 .navbar__heading {
   font-family: 'Pacifico', cursive;
   font-weight: 400;
-  color: #4a4a4a;
+  color: $white;
   background-color: transparent;
   font-size: 36px;
   line-height: 1.6;
@@ -52,9 +56,9 @@
 .navbar__user-name {
   text-decoration: none;
   padding: 20px 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-opensans;
   font-weight: 400;
-  color: #4a4a4a;
+  color: $white;
 }
 
 .form-group--btn {

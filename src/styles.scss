@@ -13,8 +13,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
 @import '~css-star-rating/scss/star-rating';
 
+// partials
+@import 'app/styles/partials/variables.scss';
+
 // atoms
 @import 'app/styles/atoms/buttons.scss';
+
+// molecules
+@import 'app/styles/molecules/rating.scss';
+@import 'app/styles/molecules/breadcrumb.scss';
 
 // organisms
 @import 'app/styles/organisms/search-form.scss';
