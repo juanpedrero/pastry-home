@@ -5,7 +5,7 @@
   <h2 class="heading__h2">¡Los mejores dulces de nuestros reposteros para cualquier ocasión y evento!</h2>
   <div class="search__select"></div>
   <div class="container container--form">
-    <form for="demo" class="custom__select custom__select--home">
+    <form for="demo" class="custom__select custom__select--home" (ngSubmit)="submit(searchForm)" #searchForm="ngForm">
 
       <angular2-multiselect [data]="typeOfPastry"  name="typeOfPastry"
       [settings]="dropdownSettings"
