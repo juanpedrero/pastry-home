@@ -2,12 +2,12 @@
 @import '../partials/variables.scss';
 
 /* ----------------------------------------
- heading
+heading
 ---------------------------------------- */
 .heading__h1 {
   padding-top: 80px;
-  padding-bottom: 25px;
-  font-size: 3.875rem;
+  padding-bottom: 13px;
+  font-size: 70px;
   text-align: center;
   font-family: 'Fjalla One', sans-serif;
   font-weight: 400;
@@ -15,15 +15,16 @@
 }
 
 .heading__h2 {
-      font-size: 1.3rem;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   color: $secondary-color;
 }
 
 .wrap-top {
   margin-bottom: 6rem;
+  background-color: $white;
 }
 
 .heading__h2--top {

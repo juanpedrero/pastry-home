@@ -1,12 +1,18 @@
 // partials
 @import '../partials/variables.scss';
 
-.myclass .c-btn {
+.custom__select--home {
+  background: $green-100;
+  max-width: calc(738px + 100px);
+  margin: 60px auto 200px;
+  border-radius: 4px;
+  padding: 4px;
 }
 .myclass {
   font-size: 16px;
   width:250px;
-  border: 2px solid #4a4a4a;
+  background: $white;
+  border: 3px solid $green-100;
   & .c-btn {
     width:300px;
     font-family: $font-opensans;
@@ -21,5 +27,8 @@
   }
   &.custom-class.ng-valid.ng-touched:not(form) {
     border: 2px solid #4a4a4a;
+  }
+  .selected-list .c-btn {
+    padding: 15px;
   }
 }
