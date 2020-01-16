@@ -1,0 +1,74 @@
+/* ----------------------------------------
+  WEB-HEADER
+---------------------------------------- */
+
+.web-header {
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 0 35px 0 15px;
+  background-color: rgba(255, 161, 144, 1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+
+}
+
+.navbar__heading {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  color: #4a4a4a;
+  background-color: transparent;
+  font-size: 36px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.navbar__user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__user-profile {
+  text-decoration: none;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem
+}
+
+.navbar__user-avatar {
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+
+}
+
+.navbar__user-name {
+  text-decoration: none;
+  padding: 20px 10px;
+  font-family: 'Average', serif;
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+.form-group--btn {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn--form {
+  text-align: center;
+  font-size: 1.15rem;
+  font-family: 'Average', serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #4a4a4a;
+  border-radius: 0;
+}
