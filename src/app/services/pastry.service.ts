@@ -224,6 +224,125 @@ export class PastryService {
           'leche',
         ],
       },
+      {
+        id: 9,
+        img: '../assets/images/strawberrie.jpg',
+        name: "Tarta de Fresa",
+        idAuthor: 1,
+        description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
+        rating: 3.5,
+        price: 17,
+        categories: [
+          'Sin gluten',
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos y ',
+          'leche',
+        ],
+      },
+      {
+        id: 9,
+        img: '../assets/images/strawberrie.jpg',
+        name: "Tarta de Fresa",
+        idAuthor: 1,
+        description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
+        rating: 3.5,
+        price: 17,
+        categories: [
+          'Sin gluten',
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos y ',
+          'leche',
+        ],
+      },
+      {
+        id: 9,
+        img: '../assets/images/strawberrie.jpg',
+        name: "Tarta de Fresa",
+        idAuthor: 1,
+        description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
+        rating: 3.5,
+        price: 17,
+        categories: [
+          'Sin gluten',
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos y ',
+          'leche',
+        ],
+      },
+      {
+        id: 9,
+        img: '../assets/images/strawberrie.jpg',
+        name: "Tarta de Fresa",
+        idAuthor: 1,
+        description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
+        rating: 3.5,
+        price: 17,
+        categories: [
+          'Sin gluten',
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos y ',
+          'leche',
+        ],
+      },
+      {
+        id: 9,
+        img: '../assets/images/strawberrie.jpg',
+        name: "Tarta de Fresa",
+        idAuthor: 1,
+        description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
+        rating: 3.5,
+        price: 17,
+        categories: [
+          'Sin gluten',
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos y ',
+          'leche',
+        ],
+      },
+      {
+        id: 9,
+        img: '../assets/images/strawberrie.jpg',
+        name: "Tarta de Fresa",
+        idAuthor: 1,
+        description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
+        rating: 3.5,
+        price: 17,
+        categories: [
+          'Sin gluten',
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos y ',
+          'leche',
+        ],
+      },
+            {
+        id: 9,
+        img: '../assets/images/strawberrie.jpg',
+        name: "Tarta de Fresa",
+        idAuthor: 1,
+        description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
+        rating: 3.5,
+        price: 17,
+        categories: [
+          'Sin gluten',
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos y ',
+          'leche',
+        ],
+      },
     ];
   }
 }
