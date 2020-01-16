@@ -1,34 +1,31 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <main>
-  <h1 class="heading__h1">¿Qué estás buscando?</h1>
-  <h2 class="heading__h2">¡Los mejores dulces de nuestros reposteros para cualquier ocasión y evento!</h2>
-  <!-- <div class="container container--form"> -->
-    <form for="demo" class="custom__select custom__select--home" (ngSubmit)="submit(searchForm)" #searchForm="ngForm">
+  <div class="app-header-search">
+    <h1 class="heading__h1">¿Qué estás buscando?</h1>
+    <h2 class="heading__h2">¡Los mejores dulces de nuestros reposteros para cualquier ocasión y evento!</h2>
+    <form class="custom__select custom__select--home" (ngSubmit)="submit(searchForm)" #searchForm="ngForm">
 
-      <angular2-multiselect [data]="typeOfPastry"  name="typeOfPastry"
-      [settings]="dropdownSettings"
-      [(ngModel)]="selectedItems"
-      (onSelect)="onItemSelect($event)" required   >
-    </angular2-multiselect>
-
-
-        <angular2-multiselect [data]="allergies"  name="allergies"
-        (onSelect)="onItemSelect($event)"
-        [(ngModel)]="selectedItems2"
-        [settings]="dropdownSettings2" required>
+      <angular2-multiselect [data]="typeOfPastry" name="typeOfPastry" [settings]="dropdownSettings"
+        [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)" required>
       </angular2-multiselect>
 
-      <angular2-multiselect [data]="ocassion"  name="ocassion"
-      (onSelect)="onItemSelect($event)"
-      [(ngModel)]="selectedItems3"
-          [settings]="dropdownSettings3" required>
-        </angular2-multiselect>
+
+      <angular2-multiselect [data]="allergies" name="allergies" (onSelect)="onItemSelect($event)"
+        [(ngModel)]="selectedItems2" [settings]="dropdownSettings2" required>
+      </angular2-multiselect>
+
+      <angular2-multiselect [data]="ocassion" name="ocassion" (onSelect)="onItemSelect($event)"
+        [(ngModel)]="selectedItems3" [settings]="dropdownSettings3" required>
+      </angular2-multiselect>
 
       <button [routerLink]="['/product/result']" type="submit" class="btn btn--form">Buscar</button>
     </form>
+  </div>
+  <!-- <div class="container container--form"> -->
+
 
 
   <!-- </div> -->
-  <app-category-list *ngFor="let category of categories" [category]="category"></app-category-list>
+  <app-category-list *ngFor="let category of categories" [category]="category" class="category"></app-category-list>
 </main>

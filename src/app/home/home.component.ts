@@ -68,12 +68,11 @@ export class HomeComponent implements OnInit {
     console.log('hola', item)
   }
 
-  resgisterForm(){
     submit(form: NgForm) {
-
+      console.log(form.value);
     }
 
-  }
+
 
 
 }
