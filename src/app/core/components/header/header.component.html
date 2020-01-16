@@ -1,17 +1,16 @@
 <!-- NO LOGGED TEMPLATE -->
-
-<div *ngIf="toLog() else Logged">
-  <header class="web-header">
+<header class="web-header">
+<div *ngIf="isLogged(), else Logged">
     <div class="container">
       <nav class="navbar">
-        <a [routerLink]="['/']" class="navbar__heading">PastryHome</a>
+        <h1 [routerLink]="['/']" class="navbar__heading">PastryHome</h1>
         <div class="menu-header">
           <div class="navbar__user">
             <!-- <button type="button" class="navbar__user-name" href="#signin"
         (click)="toShow()">Signup</button> -->
 
-            <a (click)="toShow()" href="#signin" role="button" class="navbar__user-name">Regístrate</a>
-            <a (click)="toShow()" href="#login" role="button" class="navbar__user-name">Inicia sesión</a>
+            <a [routerLink]="['/register']"  role="button" class="navbar__user-name">Regístrate</a>
+            <a [routerLink]="['/login']" role="button" class="navbar__user-name">Inicia sesión</a>
           </div>
           <div [routerLink]="['/cart']" class="cart">
             <svg class="cart-icon" width="30" height="30">
@@ -20,12 +19,46 @@
           </div>
         </div>
       </nav>
+
+      <!-- <app-login *ngIf="isLoginOpen" (closeLogin)="openLogin()"></app-login>
+      <app-signup *ngIf="isSignupOpen" (closeSignup)="openSignup()"></app-signup> -->
+
+
     </div>
-  </header>
+
+
+
 </div> <!-- NO LOGGED TEMPLATE -->
 
 <!-- LOGGED TEMPLATE -->
 <ng-template #Logged>
+    <div class="container">
+      <nav class="navbar">
+        <a [routerLink]="['/']" class="navbar__heading">PastryHome</a>
+        <div class="navbar__user">
+          <a href="#" class="navbar__user-profile">
+            <img src="../../../../assets/images/avatar.jpg" alt="" class="navbar__user-avatar ">
+            <span class="navbar__user-name">User Name</span>
+          </a>
+          <button class="btn btn--user-menu" type="button">
+            ▼
+          </button>
+          <div [routerLink]="['/cart']" class="cart">
+            <svg class="cart-icon" width="30" height="30">
+              <use xlink:href="/assets/svg/sprite.svg#cart"></use>
+            </svg>
+          </div>
+        </div>
+      </nav>
+    </div>
+</ng-template><!-- LOGGED TEMPLATE -->
+</header>
+
+
+
+
+
+<!-- <div *ngIf="isLogged() else noLogged">
   <header class="web-header">
     <div class="container">
       <nav class="navbar">
@@ -38,8 +71,8 @@
           <button class="btn btn--user-menu" type="button">
             ▼
           </button>
-          <div class="cart">
-            <svg class="cart-icon">
+          <div [routerLink]="['/cart']" class="cart">
+            <svg class="cart-icon" width="30" height="30">
               <use xlink:href="/assets/svg/sprite.svg#cart"></use>
             </svg>
           </div>
@@ -47,100 +80,31 @@
       </nav>
     </div>
   </header>
-</ng-template><!-- LOGGED TEMPLATE -->
+</div> LOGGED TEMPLATE
 
-
-<!-- /* Modal */ -->
-
-<!-- <div *ngIf="isShown" [ngClass]="{'overlay-isShown':isShown}" id="signin" class="overlay">
-  <div class="signin-popup">
-    <a (click)="toShow()" href="#" class="close">&times;</a>
-    <form action="..." method="...">
-      <fieldset class="form-fieldset form-fieldset--personaldata">
-        <legend class="form-legend">Crear cuenta</legend>
-        <div class="form-register">
-          <div class="form-group">
-            <label class="form-group__label" for="name">Nombre</label>
-            <input class="form-group__control" type="text" id="name">
+<ng-template #noLogged>
+  <header class="web-header">
+    <div class="container">
+      <nav class="navbar">
+        <a [routerLink]="['/']" class="navbar__heading">PastryHome</a>
+        <div class="menu-header">
+          <div class="navbar__user">
+            <a (click)="toShow()" href="#signin" role="button" class="navbar__user-name">Regístrate</a>
+            <a (click)="toShow()" href="#login" role="button" class="navbar__user-name">Inicia sesión</a>
           </div>
-          <div class="form-group">
-            <label class="form-group__label" for="lastname">Apellidos</label>
-            <input class="form-group__control" type="text" id="lastname">
-          </div>
-          <div class="form-group">
-            <label class="form-group__label" for="email">Correo electrónico</label>
-            <input class="form-group__control" type="email" id="email">
-          </div>
-          <div class="form-group">
-            <label class="form-group__label" for="password">Contraseña</label>
-            <input class="form-group__control" type="password" id="nombre">
-          </div>
-          <div class="form-group">
-            <label class="form-group__label" for="city">Ciudad</label>
-            <input class="form-group__control" type="text" id="city">
+          <div [routerLink]="['/cart']" class="cart">
+            <svg class="cart-icon" width="30" height="30">
+              <use xlink:href="/assets/svg/sprite.svg#cart"></use>
+            </svg>
           </div>
         </div>
-      </fieldset>
-      <fieldset class="form-fieldset form-fieldset--typecustomer">
-        <legend class="form-legend">¿Qué tipo de usuario eres?</legend>
-        <div class=" form-register form-register--typeclient">
-          <div class="form-group form-group--typeclient">
-            <input class="form-group__control form-group__control--typeclient" type="radio" id="r-01" name="typeclient">
-            <label class="form-group__label form-group__label--typeclient " for="r-01">Cliente</label>
-          </div>
-          <div class="form-group form-group--typeclient">
-            <input class="form-group__control form-group__control--typeclient" type="radio" id="r-02" name="typeclient">
-            <label class="form-group__label form-group__label--typeclient" for="r-02">Reposter@</label>
-          </div>
-        </div>
-      </fieldset>
-      <div class="form-group form-group--btn">
-        <button type="submit" class="btn btn--form">Crea tu cuenta</button>
-      </div>
-    </form>
-  </div>
-</div> -->
+      </nav>
+
+       <app-login *ngIf="isLoginOpen" (closeLoginModal)="openLoginModal()"></app-login>
+
+      <app-signup *ngIf="isSignupOpen" (closeSignupModal)="openSignupModal()"></app-signup>
 
 
-
-
-<!-- //// LOGIN ///// -->
-<div *ngIf="isShown" [ngClass]="{'login-isShown':isShown}" class="login" id="login">
-
-  <form class="form form--login">
-    <h4 class="h4 h4--login container">¡Bienvenido de nuevo!</h4>
-    <div class="container container--login">
-      <div class="form-group form-group--login">
-        <label class="form-group__label form-group__label--login" for="email">Correo electrónico</label>
-        <input type="email" class="form-group__control form-group__control--login" id="email"
-          aria-describedby="emailHelp">
-      </div>
-      <div class="form-group form-group--login">
-        <label class="form-group__label form-group__label--login" for="password">Contraseña</label>
-        <input type="password" class="form-group__control form-group__control--login" id="password">
-      </div>
-      <button type="submit" class="btn btn--form btn--login">Entrar</button>
     </div>
-    <a class="container">He olvidado mi contraseña</a>
-  </form>
-
-  <a (click)="toShow()" href="#" class="close close--login">&times;</a>
-</div>
-
-<!-- ////// Menu USER/////
-
-<div id="dropdown-user" class="dropdown-user">
-  <a [routerLink]="['/profile']" class="dropdown-login__link">Mi Perfil</a>
-  <a [routerLink]="['/orders']" class="dropdown-login__link">Mis pedidos</a>
-  <a [routerLink]="['/favorites']" class="dropdown-login__link">Mis favoritos</a>
-  <button type="button" class="dropdown-login__link dropdown-login__btn" (click)="logout()">Cerrar sesión</button>
-</div>
-
-
-////// Menu Baker/////
-
-<div id="dropdown-baker" class="dropdown-baker">
-  <a [routerLink]="['/profile']" class="dropdown-login__link">Mi Perfil</a>
-  <a [routerLink]="['/orders']" class="dropdown-login__link">Mis creaciones</a>
-  <button type="button" class="dropdown-login__link dropdown-login__btn" (click)="logout()">Cerrar sesión</button>
-</div> -->
+  </header>NO LOGGED TEMPLATE
+</ng-template> -->

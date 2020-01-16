@@ -24,7 +24,7 @@ export class AuthorService {
       {
         id: 2,
         name: 'Juan',
-        description: 'Haria y Huevos',
+        description: 'Harina y Huevos',
         img: '../assets/images/avatar.jpg',
       },
       {

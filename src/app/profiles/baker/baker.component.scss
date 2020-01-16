@@ -11,27 +11,19 @@
   margin: 0 auto;
   padding: 0 2rem;
 
-  &--ingredients{
-    margin-top: 40px;
-    padding:40px 0 0 0;
-    border-top: 1px solid #4a4a4a;
+  &--author{
+justify-content: start;
   }
 }
 
-.img--author {
-  width: rem(200px);
-  height: rem(200px);
-}
-
-.product {
-  display: flex;
+.author {
   flex-direction: column;
   padding: 0 2rem;
 
   &__title {
+    font: 1.5rem "Fjalla One", sans-serif;
 
     &-header{
-      font: 1.5rem "Fjalla One", sans-serif;
     }
 
     &-chips{
@@ -68,11 +60,10 @@
   }
 }
 
+
 .author-pic{
   margin-right: 1rem;
-  height: 100px;
-  width: 100px;
-  cursor: pointer;
+  width: 25%;
 }
 
 .chip__name{

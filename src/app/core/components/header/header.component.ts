@@ -7,21 +7,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
 
-  private isLogged = true;
-  private isShown = false;
+  private isLoginOpen: boolean;
+  private isSignupOpen: boolean;
+
+  // private isShown = false;
+
+  constructor() {
+    this.isSignupOpen = false
+    this.isLoginOpen = false
+   }
 
   ngOnInit() {
   }
 
-  toLog(): boolean{
+  openLogin(): void {
+
+    this.isLoginOpen = !this.isLoginOpen;
+    console.log('hola');
+  }
+
+  openSignup(): void {
+    this.isSignupOpen = !this.isSignupOpen;
+  }
+
+  isLogged(): boolean{
     if (localStorage.getItem('user')) {
       return true;
     }
   }
 
-  toShow(): void{
-    this.isShown = !(this.isShown);
-  }
+//   toShow(): void{
+//     this.isShown = !(this.isShown);
+//   }
 }

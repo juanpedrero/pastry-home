@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Average&display=swap');
 
+:host{
+  height: 100vh;
+}
 
 .wrap {
   margin-top: 3rem;

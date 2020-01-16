@@ -5,7 +5,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ErrorComponent } from './components/error/error.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { DropdownLoginUserComponent } from './components/dropdown-login-user/dropdown-login-user.component';
+import { DropdownLoginBakerComponent } from './components/dropdown-login-baker/dropdown-login-baker.component';
+import { FormsModule } from '@angular/forms';
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 
 
 
@@ -17,18 +21,24 @@ import { SigninComponent } from './components/signin/signin.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    SigninComponent
+    SignupComponent,
+    DropdownLoginUserComponent,
+    DropdownLoginBakerComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
+    AngularMultiSelectModule,
   ],
   exports: [
     ErrorComponent,
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    SigninComponent
+    SignupComponent,
+    AngularMultiSelectModule,
+    FormsModule
   ]
 })
 export class CoreModule { }

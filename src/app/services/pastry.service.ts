@@ -47,6 +47,7 @@ export class PastryService {
     return list.find((pastry)=> id === pastry.id);
   }
 
+
   fillPastryListWithAuthor(list: Pastry[], idAuthor: number): Pastry[] {
     const filledList: Pastry[] = [...list];
     const author = this.authorService.getAuthorById(idAuthor);
@@ -69,9 +70,9 @@ export class PastryService {
           'Vegano'
         ],
         ingredients: [
-          'Harina de maiz',
-          'Huevos',
-          'Leche'
+          'Harina de maiz, ',
+          'huevos, ',
+          'leche, '
         ],
       },
       {
@@ -86,10 +87,10 @@ export class PastryService {
           'Chocolate'
         ],
         ingredients: [
-          'Harina',
-          'Huevos',
-          'Leche',
-          'Chocolate'
+          'Harina, ',
+          'huevos, ',
+          'leche y ',
+          'chocolate'
         ],
       },
       {
@@ -105,10 +106,10 @@ export class PastryService {
           'Fritos'
         ],
         ingredients: [
-          'Harina de arroz',
-          'Huevos',
-          'Leche',
-          'Queso'
+          'Harina de arroz, ',
+          'huevos, ',
+          'leche y ',
+          'queso'
         ],
       },
       {
@@ -125,11 +126,10 @@ export class PastryService {
           'Chocolate'
         ],
         ingredients: [
-          'Harina de arroz',
-          'Huevos',
-          'Leche',
-          'Queso',
-          'Amor'
+          'Harina de arroz, ',
+          'huevos, ',
+          'leche y ',
+          'queso ',
         ],
       },
       {
@@ -145,11 +145,10 @@ export class PastryService {
           'Chocolate'
         ],
         ingredients: [
-          'Harina de arroz',
-          'Huevos',
-          'Leche',
-          'Queso',
-          'Amor'
+          'Harina de arroz, ',
+          'huevos, ',
+          'leche. ',
+          'queso, ',
         ],
       },
       {
@@ -164,11 +163,9 @@ export class PastryService {
           'Fritos'
         ],
         ingredients: [
-          'Harina de arroz',
-          'Huevos',
-          'Leche',
-          'Queso',
-          'Amor'
+          'Harina de arroz, ',
+          'agua y ',
+          'sal',
         ],
       },
       {
@@ -185,11 +182,10 @@ export class PastryService {
           'Sin Gluten'
         ],
         ingredients: [
-          'Harina de arroz',
-          'Huevos',
-          'Leche',
-          'Queso',
-          'Amor'
+          'Harina de arroz, ',
+          'huevos, ',
+          'leche y ',
+          'queso',
         ],
       },
       {
@@ -205,11 +201,10 @@ export class PastryService {
           'Vegano',
         ],
         ingredients: [
-          'Harina de arroz',
-          'Huevos',
-          'Leche',
-          'Queso',
-          'Amor'
+          'Harina, ',
+          'huevos, ',
+          'mantequilla y ',
+          'chocolate',
         ],
       },
       {
@@ -224,11 +219,9 @@ export class PastryService {
           'Sin gluten',
         ],
         ingredients: [
-          'Harina de arroz',
-          'Huevos',
-          'Leche',
-          'Queso',
-          'Amor'
+          'Harina, ',
+          'huevos y ',
+          'leche',
         ],
       },
     ];

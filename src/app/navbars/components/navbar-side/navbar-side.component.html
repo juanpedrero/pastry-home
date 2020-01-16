@@ -1,71 +1,71 @@
-<p>navbar-side works!</p>
-<div class="container container--flexbox container--result">
+<div class="container__search">
+  <nav class="filter">
 
-  <div class="container-search">
-    <nav class="filter">
+    <form for="form-side" class="custom__select custom__select--result">
+      <h2 class="filter__title">Tipo de dulce</h2>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="cake" type="checkbox">
+        <label class="form-group__label" for="cake">Monuments</label>
+      </div>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="dessert" type="checkbox">
+        <label class="form-group__label" for="dessert">Postre</label>
+      </div>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="iceCream" type="checkbox">
+        <label class="form-group__label" for="iceCream">Helado</label>
+      </div>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="teaBiscuit" type="checkbox">
+        <label class="form-group__label" for="teaBiscuit">Pastas</label>
+      </div>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="chocolate" type="checkbox">
+        <label class="form-group__label" for="chocolate">Chocolate</label>
+      </div>
+      <h2 class="filter__title">¿Alergías y/o intolerancias?</h2>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="gluten" type="checkbox">
+        <label class="form-group__label" for="gluten">Gluten</label>
+      </div>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="egg" type="checkbox">
+        <label class="form-group__label" for="egg">Huevo</label>
+      </div>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="nuts" type="checkbox">
+        <label class="form-group__label" for="nuts">Frutos Secos</label>
+      </div>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="peanut" type="checkbox">
+        <label class="form-group__label" for="peanut">Cacahuete</label>
+      </div>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="soja" type="checkbox">
+        <label class="form-group__label" for="soja">Soja</label>
+      </div>
+      <div class="form-group checkbox__group">
+        <input class="form-group__checkbox form-group__checkbox--hidden" id="milk" type="checkbox">
+        <label class="form-group__label" for="milk">Leche</label>
+      </div>
+      <h2 class="filter__title">Ocasión</h2>
+      <div class="form-group radio__group">
+        <input class="form-group__readio form-group__radio--hidden" id="birthday" type="radio" name="ocassion">
+        <label class="form-group__label" for="birthday">Cumpleaños</label>
+      </div>
+      <div class="form-group radio__group">
+        <input class="form-group__readio form-group__radio--hidden" id="wedding" type="radio" name="ocassion">
+        <label class="form-group__label" for="wedding">Boda</label>
+      </div>
+      <div class="form-group radio__group">
+        <input class="form-group__readio form-group__radio--hidden" id="babyShower" type="radio" name="ocassion">
+        <label class="form-group__label" for="babyShower">Baby Shower</label>
+      </div>
+      <div class="form-group radio__group">
+        <input class="form-group__readio form-group__radio--hidden" id="friends" type="radio" name="ocassion">
+        <label class="form-group__label" for="friends">Con Amigos</label>
+      </div>
+    </form>
+  </nav>
 
-      <form for="demo" class="custom__select custom__select--result">
-        <h2 class="filter__title">Tipo de dulce</h2>
-        <ul class="dropdown__list">
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="cake">Tarta</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox2" value="dessert">Postre</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="iceCream">Helado</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="teaBiscuit">Pastas</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="chocolate">Chocolate</label>
-          </li>
-        </ul>
-        <h2 class="filter__title">¿Alergías y/o intolerancias?</h2>
-        <ul class="dropdown__list">
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="gluten">Gluten</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox2" value="egg">Huevo</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="nuts">Frutos
-              Secos</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="peanut">Cacahuete</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="soja">Soja</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="milk">Leche</label>
-          </li>
-        </ul>
-        <h2 class="filter__title">Ocasión</h2>
-        <ul class="dropdown__list">
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="birthday">Cumpleaños</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox2" value="wedding">Boda</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="babyShower">Baby
-              Shower</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="firstCommunion">Comunión</label>
-          </li>
-          <li>
-            <label><input class="dropdown__item" type="checkbox" id="cbox1" value="friends">Con
-              Amigos</label>
-          </li>
-        </ul>
-      </form>
-    </nav>
-
-  </div>
+</div>

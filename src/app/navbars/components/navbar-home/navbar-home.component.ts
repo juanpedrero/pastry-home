@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarHomeComponent implements OnInit {
 
-  constructor() { }
+  private isDropdownSearchOpen: boolean;
+
+
+  constructor() {
+    this.isDropdownSearchOpen = false
+
+   }
 
   ngOnInit() {
+  }
+
+  openDropdownSearch(): void {
+    this.isDropdownSearchOpen = !this.isDropdownSearchOpen;
+  }
+
+  closeDropdownSearch(): void {
+    this.isDropdownSearchOpen = false;
   }
 
 }

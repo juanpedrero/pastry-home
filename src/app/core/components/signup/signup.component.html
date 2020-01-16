@@ -1,0 +1,111 @@
+<div id="signin" class="container">
+  <div class="signin-popup">
+    <form class="form"  #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)" >
+      <fieldset class="form-fieldset form-fieldset--personaldata">
+        <legend class="form-legend">Crear cuenta</legend>
+        <div class="form-register">
+          <div class="form-group">
+            <label class="form-group__label" for="name">Nombre</label>
+            <input
+            class="form-group__control"
+            type="text"
+            required
+            id="name"
+            name="name"
+            [(ngModel)]="user.name"
+            #name=ngModel
+            [ngClass]="{isInvalid: name?.touched && !name.valid}">
+          </div>
+          <div class="form-group">
+            <label class="form-group__label" for="lastname">Apellidos</label>
+            <input
+            class="form-group__control"
+            type="text"
+            required
+            id="lastname"
+            name="apellidos"
+            [(ngModel)]="user.lastname"
+            #lastname="ngModel"
+            [ngClass]="{isInvalid: lastname?.touched && !lastname?.valid}">
+          </div>
+          <div class="form-group">
+            <label class="form-group__label" for="email">Correo electrónico</label>
+            <input
+            class="form-group__control"
+            type="email"
+            required
+            id="email"
+            name="email"
+            [(ngModel)]="user.email"
+            #email="ngModel"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+            [ngClass]="{isInvalid: email?.touched && !email?.valid}" >
+                     </div>
+          <div class="form-group">
+            <label class="form-group__label" for="password">Contraseña</label>
+            <input
+            class="form-group__control"
+            type="password"
+            required
+            id="password"
+            name="contraseña"
+            [(ngModel)]="user.password"
+            #password="ngModel"
+            [ngClass]="{isInvalid: password?.touched && !password?.valid}" >
+          </div>
+          <div class="form-group">
+            <label class="form-group__label" for="repeatPassword">Repita contraseña</label>
+            <input
+            class="form-group__control"
+            type="password"
+            required
+            id="repeatPassword"
+            name="repeatPassword"
+            [(ngModel)]="user.repeatPassword"
+            #repeatPassword="ngModel"
+            [ngClass]="{isInvalid: repeatPassword?.touched && !repeatPassword?.valid}" >
+          </div>
+          <div class="form-group">
+            <label class="form-group__label" for="city">Ciudad</label>
+            <input
+            class="form-group__control"
+            type="text"
+            required
+            id="city"
+            name="ciudad"
+            [(ngModel)]="user.city"
+            #city="ngModel"
+            [ngClass]="{isInvalid: city?.touched && !city?.valid}">
+          </div>
+        </div>
+      </fieldset>
+      <!-- <fieldset class="form-fieldset form-fieldset--typecustomer">
+        <legend class="form-legend">¿Qué tipo de usuario eres?</legend>
+        <div class=" form-register form-register--typeclient">
+          <div class="form-group form-group--typeclient">
+            <input
+            class="form-group__control form-group__control--typeclient"
+            type="radio"
+            id="r-01"
+            name="type">
+
+
+            <label class="form-group__label form-group__label--typeclient " for="r-01">Cliente</label>
+          </div>
+          <div class="form-group form-group--typeclient">
+            <input
+            class="form-group__control form-group__control--typeclient"
+            type="radio"
+            id="r-02"
+            name="type"
+            >
+            <label class="form-group__label form-group__label--typeclient" for="r-02">Reposter@</label>
+          </div>
+        </div>
+      </fieldset> -->
+      <div class="form-group form-group--btn">
+        <button type="submit" class="btn btn--form" [disabled]="!signupForm.valid">Crea tu cuenta</button>
+      </div>
+    </form>
+  </div>
+</div>

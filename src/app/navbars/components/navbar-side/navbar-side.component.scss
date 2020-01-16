@@ -1,6 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Average&display=swap');
+
+
 .container-search {
   display: flex;
   padding-top: 20px;
  width: 20%;
  min-width: 200px;
+}
+
+.filter__titlte {
+  font-family: 'Average', serif;
+
+}
+
+.form-group{
+
+  &__checkbox{
+
+  }
+
+  &__label{
+    font-family: 'Average', serif;
+
+  }
+
 }

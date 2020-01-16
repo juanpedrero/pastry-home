@@ -1,0 +1,105 @@
+// Modal
+.modal {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &-open {
+    overflow: hidden;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 37.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    background-color: $white;
+    padding: 4rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: $font-title;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    color: $orange;
+  }
+
+  &__options {
+    display: flex;
+    margin-left: -0.5rem;
+
+    &--signup {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__btn {
+    margin: 1rem auto 0;
+
+    &--join:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    color: $blue;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 2rem;
+    padding: 0;
+
+    &--back {
+      left: 2rem;
+    }
+
+    &--close {
+      right: 2rem;
+    }
+
+    &--back,
+    &--close {
+      line-height: 0.5;
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: $blue;
+      }
+
+      &:hover {
+        svg {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .form-group__control:focus {
+    outline: 0;
+    border-color: $orange;
+  }
+}

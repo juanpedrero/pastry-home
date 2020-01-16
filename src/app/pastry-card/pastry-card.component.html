@@ -1,7 +1,6 @@
 <div>
   <a class="card-link"[routerLink]="['/product', pastry.id]">
     <div class="card">
-      <!-- <div class="card__image" [ngStyle]="{background-img: 'url('../assets/images/brazo_navidad.jpg')'}"></div> -->
       <img class="card__image" src="{{pastry.img}}" alt="Avatar">
       <div class="card__info">
         <h4 class="card__info-pastry">{{pastry.name}}</h4>
@@ -12,7 +11,6 @@
             [starType]="'svg'"
             [rating]="pastry.rating"
             [labelPosition]="'left'"
-            [labelText]="pastry.rating"
             [staticColor]="'ok'"
             [size]="'medium'"
             [readOnly]="'true'"

@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './core/components/login/login.component';
-import { SigninComponent } from './core/components/signin/signin.component';
 import { ErrorComponent } from './core/components/error/error.component';
 import { HomeComponent } from './home/home.component';
 // import { PastryCardComponent } from './pastries/pastry-card/pastry-card.component';
@@ -10,18 +8,20 @@ import { CustomerComponent } from './profiles/customer/customer.component';
 import { PastryDetailComponent } from './pastries/pastry-detail/pastry-detail.component';
 import { PastryListComponent } from './pastries/pastry-list/pastry-list.component';
 import { CartComponent } from './shared/cart/cart.component';
+import { SignupComponent } from './core/components/signup/signup.component';
+import { LoginComponent } from './core/components/login/login.component';
 
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'register', component: SignupComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'signin', component: SigninComponent},
   {path: 'product/result', component: PastryListComponent},
   {path: 'category/:category', component: PastryListComponent},
   {path: 'product/:id', component: PastryDetailComponent},
-  {path: 'baker', component: BakerComponent},
-  {path: 'customer', component: CustomerComponent},
+  {path: 'baker/:id', component: BakerComponent},
+  {path: 'customer/:id', component: CustomerComponent},
   {path: 'cart', component: CartComponent},
   {path: '**', component: ErrorComponent},
 ];

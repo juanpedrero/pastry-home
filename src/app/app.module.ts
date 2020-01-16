@@ -18,6 +18,7 @@ import { NavbarSideComponent } from './navbars/components/navbar-side/navbar-sid
 import { CartComponent } from './shared/cart/cart.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { StarRatingModule } from 'angular-star-rating';
+//import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { StarRatingModule } from 'angular-star-rating';
     CoreModule,
     BrowserModule,
     AppRoutingModule,
+    //AngularMultiSelectModule,
    // ModalsModule,
     ProfilesModule,
     StarRatingModule.forRoot()

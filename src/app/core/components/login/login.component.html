@@ -1,17 +1,43 @@
-<p>login works!</p>
-<div *ngIf="show" class="login" id="login">
+<!-- <div class="container"> -->
+<div class="container" id="login">
+  <form (ngSubmit)="submit(email, password)" #loginForm="ngForm" class="form form--login">
+    <h4 class="h4 h4--login container">¡Bienvenido de nuevo!</h4>
+    <div class="container container--login">
+      <div class="form-group form-group--login">
+        <label class="form-group__label form-group__label--login" for="email">Correo electrónico</label>
+        <input type="email" class="form-group__control form-group__control--login" id="email" name="email"
+          [(ngModel)]="login.email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          [ngClass]="{isInvalid: email?.touched && !email?.valid}">
+        <!-- <div *ngIf= "email.touched && email?.invalid">
+                Correo elecrtónico no válido
+              </div> -->
+        <div *ngIf="email?.touched && !email?.valid" [ngClass]="{warning: email?.touched && !email?.valid}">
+          Correo electrónico no válido
+        </div>
+      </div>
 
-  <form class="form">
-      <h4>LOGIN</h4>
-      <div class="form-group">
-          <label class="form-group__label" for="email">Email address</label>
-          <input type="email" class="form-group__control" id="email" aria-describedby="emailHelp">
+
+
+      <div class="form-group form-group--login">
+        <label class="form-group__label form-group__label--login" for="password">Contraseña</label>
+        <input type="password" class="form-group__control form-group__control--login" id="password" name="password"
+          #password="ngModel" [(ngModel)]="login.password" required
+          [ngClass]="{isInvalid: password?.touched && !password?.valid}">
+        <!-- pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$" -->
+        <div *ngIf="password?.touched && !password?.valid" [ngClass]="{warning: password?.touched && !password?.valid}">
+          * Campo obligatorio
+        </div>
       </div>
-      <div class="form-group">
-          <label class="form-group__label" for="password">Password</label>
-          <input type="password" class="form-group__control" id="password">
-      </div>
-      <button type="submit" class="btn btn--form">Submit</button>
+
+
+
+      <div class="form-group--login"></div>
+      <button type="submit" class="btn btn--form btn--login" [disabled]="!loginForm.valid" >Entrar</button>
+    </div>
   </form>
-  <a href="#" class="close">&times;</a>
+  <!-- <a class="container container--login">He olvidado mi contraseña</a> -->
+
+  <!-- <a class="container">He olvidado mi contraseña</a> -->
+  <!-- <a (click)="modalClose()" href="#" class="close close--login">&times;</a> -->
 </div>
+<!-- </div> -->
