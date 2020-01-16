@@ -26,6 +26,7 @@
 // organisms
 @import 'app/styles/organisms/search-form.scss';
 @import 'app/styles/organisms/card.scss';
+@import 'app/styles/organisms/navbar.scss';
 
 
 
@@ -174,26 +175,4 @@
 /* ----------------------------------------
  MEDIA
 ---------------------------------------- */
-
-
-
-.myclass {
-  font-size: 16px;
-  width:250px;
-  border: 2px solid #4a4a4a;
-  & .c-btn {
-    outline: 0;
-    border: red;
-    width:300px;
-    font-size: 16px;
-
-  }
-  & .selected-list .c-list .c-token {
-    background-color: #ffa190;
-
-  }
-  &.custom-class.ng-valid.ng-touched:not(form) {
-    border: 2px solid #4a4a4a;
-  }
-}
 
