@@ -1,14 +1,14 @@
 // partials
 @import '../partials/variables.scss';
 
-app-home {
+.app-header-search {
+  margin-bottom: 90px;
+  padding: 128px 0 148px;
   background: $pink-100;
 }
 .custom__select--home {
   //background: $green-100;
-  max-width: calc(738px + 100px);
-  margin: 60px auto 200px;
-  border-radius: 4px;
+  margin: 60px auto 0;
   padding: 4px;
 }
 .myclass {
@@ -16,14 +16,15 @@ app-home {
   width:250px;
   background: $white;
   margin-right: 10px;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.1);
   //border: 3px solid $green-100;
   & .c-btn {
     width:300px;
     font-family: $font-opensans;
     font-size: 16px;
+    color: $gray-400;
     outline: 0;
-    border: red;
 
   }
   & .selected-list .c-list .c-token {

@@ -1,4 +1,16 @@
-.rating.color-ok .star-container .star svg {
-    fill: $blue-200 !important;
-}
 
+.rating {
+  margin-bottom: 0;
+
+  &.color-ok .star-container .star svg {
+    fill: $blue-200 !important;
+  }
+
+  .star-container {
+    margin-right: 0;
+  }
+  &.medium .star {
+    width: 16px;
+    height: 16px;
+  }
+}
