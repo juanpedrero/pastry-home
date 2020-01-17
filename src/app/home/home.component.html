@@ -27,5 +27,7 @@
 
 
   <!-- </div> -->
-  <app-category-list *ngFor="let category of categories" [category]="category" class="category"></app-category-list>
+  <div class="category">
+    <app-category-list *ngFor="let category of categories" [category]="category" class="category"></app-category-list>
+  </div>
 </main>

@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
 
   private typeOfPastry: Array<Object> = [];
   private allergies: Array<Object> = [];
-  private ocassion : Array<Object> = [];
+  private ocassion: Array<Object> = [];
 
   ngOnInit() {
     this.categories = this.categoryService.getCategories();
@@ -68,9 +68,9 @@ export class HomeComponent implements OnInit {
     console.log('hola', item)
   }
 
-    submit(form: NgForm) {
-      console.log(form.value);
-    }
+  submit(form) {
+    console.log(form.value);
+  }
 
 
 
