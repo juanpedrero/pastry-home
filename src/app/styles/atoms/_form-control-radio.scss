@@ -7,8 +7,7 @@
 
 .form-control__radio {
   position: relative;
-  display: inline-block;
-  min-height: 2rem;
+  display: block;
   margin-right: 2rem;
 }
 
@@ -24,21 +23,22 @@
 .form-control__radio label {
   display: flex;
   align-items: center;
-  min-height: 2rem;
   padding-left: calc(2rem + 8px);
   margin-bottom: 0;
+  font-family: $font-opensans;
+  font-size: 14px;
   font-weight: 300;
   cursor: pointer;
 }
 
 .form-control__radio .form-control__description {
   transform: translateY(3px);
+  font-family: $font-opensans;
   color: #333;
 }
 
 .form-control__radio .form-control__note {
   margin-top: 0.1875rem;
-  margin-left: -webkit-calc(2rem + 8px);
   margin-left: calc(2rem + 8px);
 }
 
@@ -113,7 +113,7 @@
 }
 
 .form-control__radio--dropdown[aria-expanded="true"] .form-control__radio-dropdown .form-control__checkbox input:focus ~ .form-control__indicator {
-  box-shadow: inset 0 0 0 1px #00a1a3;
+  box-shadow: inset 0 0 0 1px $blue-200;
 }
 
 .form-control__radio--dropdown > label {
@@ -208,8 +208,6 @@
 .form-control__radio--dropdown .form-control__radio-dropdown__actions-submit {
   margin-top: 1.5rem;
   padding-bottom: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
 }
@@ -239,17 +237,17 @@
 }
 
 .form-control__radio input[type="radio"]:checked ~ .form-control__indicator {
-  color: #00a1a3;
+  color: $blue-200;
 }
 
 .form-control__radio input[type="radio"]:focus ~ .form-control__indicator {
-  border-color: #00a1a3;
-  -webkit-box-shadow: inset 0 0 0 1px #00a1a3
-  box-shadow: inset 0 0 0 1px #00a1a3;
+  border-color: $blue-200;
+  -webkit-box-shadow: inset 0 0 0 1px $blue-200;
+  box-shadow: inset 0 0 0 1px $blue-200;
 }
 
 .form-control__radio input[type="radio"]:active ~ .form-control__indicator {
-  border-color: #00a1a3;
+  border-color: $blue-200;
   color: #fff;
   box-shadow: none;
 }
@@ -274,8 +272,8 @@
   top: 0;
   left: 0;
   display: block;
-  width: 2rem;
-  height: 2rem;
+  width: 24px;
+  height: 24px;
   border: 1px solid #d9d9d9;
   background-color: #fff;
   background-repeat: no-repeat;

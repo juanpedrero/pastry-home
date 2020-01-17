@@ -25,12 +25,15 @@
   align-items: center;
   padding-left: calc(2rem + 8px);
   margin-bottom: 0;
+  font-family: $font-opensans;
   font-weight: 300;
   cursor: pointer;
 }
 
 .form-control__checkbox .form-control__description {
   transform: translateY(3px);
+  font-family: $font-opensans;
+  font-size: 14px;
   color: #333;
 }
 

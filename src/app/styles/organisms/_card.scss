@@ -227,11 +227,15 @@
     border: none;
     text-decoration: none;
     padding: 10px 120px 10px 10px;
-    font-family: 'Average', serif;
+    font-family: $font-opensans;
     font-weight: 400;
     font-size: 1.15rem;
     color: #4a4a4a;
     cursor: pointer;
+  }
+
+  .filter__title {
+    padding: 0;
   }
 
   .dropdown__btn01::after,
