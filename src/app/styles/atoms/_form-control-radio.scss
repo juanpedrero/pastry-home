@@ -1,0 +1,296 @@
+// -----------------------------------------------------------------------------
+// CHECKBOX
+// -----------------------------------------------------------------------------
+
+@import '../partials/variables.scss';
+
+
+.form-control__radio {
+  position: relative;
+  display: inline-block;
+  min-height: 2rem;
+  margin-right: 2rem;
+}
+
+.form-control__radio:not(:nth-last-child(1)) {
+  margin-bottom: 1rem;
+}
+
+.form-control__radio.form-control--block {
+  display: block;
+  margin-right: 0;
+}
+
+.form-control__radio label {
+  display: flex;
+  align-items: center;
+  min-height: 2rem;
+  padding-left: calc(2rem + 8px);
+  margin-bottom: 0;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.form-control__radio .form-control__description {
+  transform: translateY(3px);
+  color: #333;
+}
+
+.form-control__radio .form-control__note {
+  margin-top: 0.1875rem;
+  margin-left: -webkit-calc(2rem + 8px);
+  margin-left: calc(2rem + 8px);
+}
+
+.form-control__radio .form-control__note:not(.form-control__note--disabled) {
+  color: #666;
+}
+
+.form-control__radio.form-control--hide-indicator label {
+  padding-left: 0;
+}
+
+.form-control__radio.form-control--hide-indicator .form-control__indicator {
+  display: none;
+}
+
+.form-control__radio.form-control--hide-indicator .form-control__description {
+  font-weight: 500;
+}
+
+.form-control__radio.form-control--hide-indicator .form-control__note {
+  margin-left: 0;
+}
+
+.form-control__radio--primary {
+  padding: 1rem;
+  background-color: rgba(0, 161, 163, 0.1);
+}
+
+.form-control__radio--primary label {
+  position: relative;
+}
+
+.form-control__radio--bold .form-control__description {
+  font-weight: 400;
+}
+
+.form-control__radio--dropdown {
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.form-control__radio--dropdown.form-control__radio--disabled {
+  background-color: #f8f8f8;
+}
+
+.form-control__radio--dropdown.form-control__radio--disabled .form-control__description {
+  color: #333 !important;
+}
+
+.form-control__radio--dropdown.form-control__radio--disabled .form-control__radio-dropdown {
+  background-color: #f8f8f8;
+}
+
+.form-control__radio--dropdown[aria-expanded="true"] > label {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ff3366' d='M0 22.619l1.505 1.381 14.495-13.261 14.495 13.261 1.505-1.381-16-14.619z'/%3E%3C/svg%3E");
+}
+
+.form-control__radio--dropdown[aria-expanded="true"] .form-control__radio-dropdown {
+  display: block;
+}
+
+.form-control__radio--dropdown[aria-expanded="true"] .form-control__radio-dropdown .form-control__checkbox {
+  margin: 1rem 0.625rem;
+  padding-bottom: 1rem;
+}
+
+.form-control__radio--dropdown[aria-expanded="true"] .form-control__radio-dropdown .form-control__checkbox .form-control__indicator {
+  border-radius: 0;
+}
+
+.form-control__radio--dropdown[aria-expanded="true"] .form-control__radio-dropdown .form-control__checkbox input:focus ~ .form-control__indicator {
+  box-shadow: inset 0 0 0 1px #00a1a3;
+}
+
+.form-control__radio--dropdown > label {
+  padding: 0.75rem 3rem;
+  position: relative;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ff3366' d='M0 9.381l1.505-1.381 14.495 13.261 14.495-13.261 1.505 1.381-16 14.619z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 95% 50%;
+}
+
+.form-control__radio--dropdown > label .form-control__indicator {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown {
+  display: none;
+  background-color: #fff;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown .col:nth-child(1) {
+  flex-basis: 6.25rem;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown .col:nth-child(2) {
+  flex-basis: 2.5rem;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown .col ~ .col {
+  margin-top: 0.5rem;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__info {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__info .form-control__label {
+  padding-left: 0;
+  font-weight: 500;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__info ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__info li {
+  padding-left: 0;
+  background-image: none;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__info li:nth-child(odd) {
+  padding-right: 0.5rem;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__info p {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__info p span {
+  color: #666;
+  font-weight: 300;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__actions {
+  display: flex;
+  border-top: 1px solid #e5e5e5;
+  background-color: #fafafa;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__actions .btn {
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__actions .btn ~ .btn {
+  margin-left: 0;
+  border-left: 1px solid #e5e5e5;
+}
+
+.form-control__radio--dropdown .form-control__radio-dropdown__actions-submit {
+  margin-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control__radio.form-control__radio--space {
+  padding: 0;
+  background-color: #fff;
+}
+
+.form-control__radio.form-control__radio--space > label {
+  padding: 0.75rem 3rem;
+}
+
+.form-control__radio.form-control__radio--space .form-control__indicator {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+*:not([class*="form-control"]):not([class*="mb--"]):not(legend) + .form-control__radio {
+  margin-top: 1.5rem;
+}
+
+.form-control__radio input[type="radio"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form-control__radio input[type="radio"]:checked ~ .form-control__indicator {
+  color: #00a1a3;
+}
+
+.form-control__radio input[type="radio"]:focus ~ .form-control__indicator {
+  border-color: #00a1a3;
+  -webkit-box-shadow: inset 0 0 0 1px #00a1a3
+  box-shadow: inset 0 0 0 1px #00a1a3;
+}
+
+.form-control__radio input[type="radio"]:active ~ .form-control__indicator {
+  border-color: #00a1a3;
+  color: #fff;
+  box-shadow: none;
+}
+
+.form-control__radio input[type="radio"]:disabled ~ .form-control__indicator,
+.form-control__radio input[type="radio"]:disabled ~ .form-control__description {
+  cursor: not-allowed;
+}
+
+.form-control__radio input[type="radio"]:disabled ~ .form-control__indicator {
+  border-color: #d9d9d9;
+  background-color: rgba(229, 229, 229, 0.3);
+  box-shadow: none;
+}
+
+.form-control__radio input[type="radio"]:disabled:not(:checked) ~ .form-control__description {
+  color: rgba(102, 102, 102, 0.6);
+}
+
+.form-control__radio .form-control__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 42% 42%;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.075);
+  pointer-events: none;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.form-control__radio input[type="radio"]:checked ~ .form-control__indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%2300a1a3'/%3E%3C/svg%3E");
+}
+
+.form-control__radio input[type="radio"]:checked:disabled ~ .form-control__indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23b2b2b2'/%3E%3C/svg%3E");
+}

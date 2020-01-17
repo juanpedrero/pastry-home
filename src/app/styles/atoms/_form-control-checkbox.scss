@@ -1,0 +1,156 @@
+// -----------------------------------------------------------------------------
+// CHECKBOX
+// -----------------------------------------------------------------------------
+
+@import '../partials/variables.scss';
+
+
+.form-control__checkbox {
+  position: relative;
+  display: block;
+  margin-right: 2rem;
+}
+
+.form-control__checkbox:not(:nth-last-child(1)) {
+  margin-bottom: 1rem;
+}
+
+.form-control__checkbox.form-control--block {
+  display: block;
+  margin-right: 0;
+}
+
+.form-control__checkbox label {
+  display: flex;
+  align-items: center;
+  padding-left: calc(2rem + 8px);
+  margin-bottom: 0;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.form-control__checkbox .form-control__description {
+  transform: translateY(3px);
+  color: #333;
+}
+
+.form-control__checkbox .form-control__note {
+  margin-top: 0.1875rem;
+  margin-left: calc(2rem + 8px);
+}
+
+.form-control__checkbox .form-control__note:not(.form-control__note--disabled) {
+  color: #666;
+}
+
+.form-control__checkbox.form-control--hide-indicator label {
+  padding-left: 0;
+}
+
+.form-control__checkbox.form-control--hide-indicator .form-control__indicator {
+  display: none;
+}
+
+.form-control__checkbox.form-control--hide-indicator .form-control__description {
+  font-weight: 500;
+}
+
+.form-control__checkbox.form-control--hide-indicator .form-control__note {
+  margin-left: 0;
+}
+
+.form-control__checkbox--primary {
+  padding: 1rem;
+  background-color: rgba(0, 161, 163, 0.1);
+}
+
+.form-control__checkbox--primary label {
+  position: relative;
+}
+
+.form-control__checkbox--link label {
+  display: inline-flex;
+}
+
+.form-control__checkbox--link label + a {
+  display: inline-block;
+  transform: translateY(3px);
+}
+
+.form-control__checkbox--expand-inside {
+  margin-bottom: 0.5rem;
+  padding: 0 1.5rem 0.25rem 2.375rem;
+}
+
+*:not([class*="form-control"]):not([class*="mb--"]):not(legend):not(.form-toggler) + .form-control__checkbox {
+  margin-top: 1.5rem;
+}
+
+.form-control__checkbox input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form-control__checkbox input[type="checkbox"]:checked ~ .form-control__indicator {
+  color: $blue-200;
+}
+
+.form-control__checkbox input[type="checkbox"]:focus ~ .form-control__indicator {
+  border-color: $blue-200;
+  box-shadow: inset 0 0 0 1px $blue-200;
+}
+
+.form-control__checkbox input[type="checkbox"]:active ~ .form-control__indicator {
+  border-color: $blue-200;
+  color: #fff;
+  box-shadow: none;
+}
+
+.form-control__checkbox input[type="checkbox"]:disabled ~ .form-control__indicator,
+.form-control__checkbox input[type="checkbox"]:disabled ~ .form-control__description {
+  cursor: not-allowed;
+}
+
+.form-control__checkbox input[type="checkbox"]:disabled ~ .form-control__indicator {
+  border-color: #d9d9d9;
+  background-color: rgba(229, 229, 229, 0.3);
+  box-shadow: none;
+}
+
+.form-control__checkbox input[type="checkbox"]:disabled:not(:checked) ~ .form-control__description {
+  color: rgba(102, 102, 102, 0.6);
+}
+
+.form-control__checkbox .form-control__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 42% 42%;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.075);
+  pointer-events: none;
+  user-select: none;
+  border-radius: 0.188rem;
+}
+
+.form-control__checkbox input[type="checkbox"]:checked ~ .form-control__indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 32'%3E%3Cpath fill='%2300a1a3' d='M38.403 5.568l-24.576 26.432-1.216-1.376-0.064 0.064-12.544-10.4 4.704-5.536 8.32 7.904 21.12-22.656z'/%3E%3C/svg%3E");
+}
+
+.form-control__checkbox input[type="checkbox"]:checked:disabled ~ .form-control__indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 32'%3E%3Cpath fill='%23b2b2b2' d='M38.403 5.568l-24.576 26.432-1.216-1.376-0.064 0.064-12.544-10.4 4.704-5.536 8.32 7.904 21.12-22.656z'/%3E%3C/svg%3E");
+}
+
+.form-control__checkbox input[type="checkbox"]:indeterminate ~ .form-control__indicator {
+  background-color: $blue-200;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%2300a1a3' d='M0 2h4'/%3E%3C/svg%3E");
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
