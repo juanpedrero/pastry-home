@@ -1,7 +1,12 @@
+// partials
+@import '../partials/variables.scss';
+
 /* ----------------------------------------
   UTILITIES
 ---------------------------------------- */
-
+// main {
+//   background: $white;
+// }
 .container {
   max-width: 1440px;
   margin: 0 auto;

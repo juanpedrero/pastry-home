@@ -10,7 +10,7 @@
   background-color: transparent;
   padding: 0 35px 0 15px;
   //background-color: rgba(255, 161, 144, 1);
-  background-color: $primary-color;
+  background-color: $white;
 }
 
 .navbar {
@@ -24,7 +24,7 @@
 .navbar__heading {
   font-family: 'Pacifico', cursive;
   font-weight: 400;
-  color: $white;
+  color: $primary-color;
   background-color: transparent;
   font-size: 36px;
   line-height: 1.6;
