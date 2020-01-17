@@ -3,7 +3,8 @@ import { PastryService } from '../services/pastry.service';
 import { Pastry } from '../types/pastry';
 import { Author } from '../types/author';
 import { CategoryService } from '../services/category.service';
-import { DropdownService } from '../services/dropdown.service'
+import { DropdownService } from '../services/dropdown.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -66,6 +67,12 @@ export class HomeComponent implements OnInit {
   public onItemSelect(item) {
     console.log('hola', item)
   }
+
+    submit(form: NgForm) {
+      console.log(form.value);
+    }
+
+
 
 
 }
