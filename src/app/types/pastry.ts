@@ -10,5 +10,8 @@ export interface Pastry {
   price: number;
   categories: string[];
   ingredients: string[];
+  typeOf: string;
+  allergy: string[];
+  ocassion: string[];
   author?: Author;
 };

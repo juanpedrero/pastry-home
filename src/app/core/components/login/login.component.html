@@ -32,12 +32,66 @@
 
 
       <div class="form-group--login"></div>
-      <button type="submit" class="btn btn--form btn--login" [disabled]="!loginForm.valid" >Entrar</button>
+      <button type="submit" class="btn btn--form btn--login" [disabled]="!loginForm.form.valid" >Entrar</button>
     </div>
   </form>
+
   <!-- <a class="container container--login">He olvidado mi contraseña</a> -->
+  <!-- Button trigger modal -->
+<span type="button" class="btn btn--primary btn--form  form--login" data-toggle="modal" data-target="#exampleModalCenter">
+  He olvidado mi contraseña
+</span>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">¡Recupera tu contraseña!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="close__tag">&times;</span>
+        </button>
+      </div>
+      <input type="email" class="form-group__control form-group__control--recovery" id="emailrecovery" name="emailrecovery" placeholder="Escribe tu correo electrónico">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn--form">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- <a class="container">He olvidado mi contraseña</a> -->
   <!-- <a (click)="modalClose()" href="#" class="close close--login">&times;</a> -->
 </div>
 <!-- </div> -->
+
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="rememberPassword">
+  He olvidado mi contraseña
+</button>
+
+<div class="modal fade" id="rememberPassword" tabindex="-1" role="dialog" aria-labelledby="rememberPasswordLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal__header">
+              <h2 class="form__title--sm">Recordar contraseña</h2>
+            </div>
+            <form class="form">
+              <div class="form-group">
+                <label for="remember-email" class="form-group__label">Email</label>
+                <input type="email" id="remember-email" placeholer="" required class="form__group-control">
+              </div>
+              <div class="form__group--center">
+                <a data-dismiss="modal" data-toggle="modal" data-target="#sentPassword" role="button"
+                  class="button button--lg">Enviar</a>
+              </div>
+            </form>
+            <a data-dismiss="modal" class="modal__close">&times;</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form__group form__group--right">
+        <a data-toggle="modal" data-target="#rememberPassword"><span>Recordar contraseña</span></a>
+      </div> -->

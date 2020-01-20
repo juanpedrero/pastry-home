@@ -1,4 +1,4 @@
-<div class="cart">
+<div class="cart" >
   <div class="open productlist sc-fYxtnH eGTzqC open">
     <div class="cart__title">
       <p>Postres: {{cartList.length}}</p>
@@ -8,18 +8,21 @@
         <div class="card">
           <img class="card__image" [src]="product.img" [alt]="product.name">
           <div class="card__product">
-            <p class="product__name">{{product.name}}</p>
-            <p class="product__price">{{product.price}} €</p>
-            <div class="">
+            <div class="product">
+              <p class="product__name">{{product.name}}</p>
+              <p class="product__price">{{product.price}} €</p>
+            </div>
+
+            <div class="container--btn-cart">
               <div>
-                <button class="">Quitar</button>
+                <button class="btn btn--cart">Quitar</button>
               </div>
-              <div class="number-product">1</div>
+              <div class="number--product">1</div>
               <div>
-                <button class="" (click)="addProduct(i)">Añadir</button>
+                <button class="btn btn--cart" (click)="addProduct(i)">Añadir</button>
               </div>
             </div>
-            <button class="delete-btn" (click)="removeProduct(i)">Eliminar</button>
+            <button class="delete-btn btn btn--remove" (click)="removeProduct(i)">Eliminar</button>
           </div>
         </div>
       </li>

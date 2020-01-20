@@ -1,0 +1,43 @@
+// partials
+@import '../../../styles/partials/variables.scss';
+
+.dropdown-login {
+  position: absolute;
+  top: calc(100%);
+  right: 1.5rem;
+  border-radius: $br8;
+  width: 12rem;
+  z-index: 10;
+
+  &__link {
+    font-family: $font-opensans;
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: left;
+    background-color: $white;
+    border: none;
+
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $primary-color;
+      font-weight: 700;
+      color: $white;
+      border-radius: $br8;
+    }
+  }
+
+  &__btn{
+    text-decoration: none;
+    background-color: $white;
+    color: $primary-color;
+    border-top: 1px solid $primary-color;
+    font-family: $font-opensans;
+    font-size: 1rem;
+
+  }
+
+
+}

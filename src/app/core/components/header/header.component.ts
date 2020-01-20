@@ -8,33 +8,39 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
 
-  private isLoginOpen: boolean;
-  private isSignupOpen: boolean;
+  private isDropdownLoginOpen: boolean;
+  // private isSignupOpen: boolean;
 
   // private isShown = false;
 
   constructor() {
-    this.isSignupOpen = false
-    this.isLoginOpen = false
+    // this.isSignupOpen = false
+    // this.isLoginOpen = false
+    this.isDropdownLoginOpen = false
    }
 
   ngOnInit() {
   }
 
-  openLogin(): void {
+  // openLogin(): void {
 
-    this.isLoginOpen = !this.isLoginOpen;
-    console.log('hola');
-  }
+  //   this.isLoginOpen = !this.isLoginOpen;
+  //   console.log('hola');
+  // }
 
-  openSignup(): void {
-    this.isSignupOpen = !this.isSignupOpen;
-  }
+  // openSignup(): void {
+  //   this.isSignupOpen = !this.isSignupOpen;
+  // }
 
   isLogged(): boolean{
     if (localStorage.getItem('user')) {
       return true;
     }
+  }
+
+  openDropdownLogin(): void{
+    this.isDropdownLoginOpen = !this.isDropdownLoginOpen
+
   }
 
 //   toShow(): void{

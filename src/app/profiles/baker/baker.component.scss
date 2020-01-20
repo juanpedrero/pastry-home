@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Average&display=swap');
 
+:host {
+  height: calc(100vh - 82px);
+}
+
 
 .wrap {
   margin-top: 3rem;
@@ -11,8 +15,9 @@
   margin: 0 auto;
   padding: 0 2rem;
 
-  &--author{
-justify-content: start;
+  &--author {
+    justify-content: start;
+    margin-bottom: 30px;
   }
 }
 
@@ -23,10 +28,9 @@ justify-content: start;
   &__title {
     font: 1.5rem "Fjalla One", sans-serif;
 
-    &-header{
-    }
+    &-header {}
 
-    &-chips{
+    &-chips {
       margin-bottom: 40px;
     }
   }
@@ -34,12 +38,12 @@ justify-content: start;
   &__description {
 
     &-tag {
-          font: 1rem "Average", sans-serif;
-          margin-bottom: 80px;
+      font: 1rem "Average", sans-serif;
+      margin-bottom: 80px;
     }
   }
 
-  &__author{
+  &__author {
     display: flex;
   }
 
@@ -48,32 +52,32 @@ justify-content: start;
   }
 }
 
-.author{
+.author {
 
-  &-by{
+  &-by {
     font: 13px "Average", sans-serif;
     color: rgba(0, 0, 0, 0.6);
   }
 
-  &-name{
+  &-name {
     font: 1rem "Average", sans-serif;
   }
 }
 
 
-.author-pic{
+.author-pic {
   margin-right: 1rem;
   width: 25%;
 }
 
-.chip__name{
+.chip__name {
   margin-right: 1rem;
   padding-right: 0.55rem;
   border-right: 1px solid #4a4a4a;
   font: 1rem "Average", sans-serif;
   cursor: pointer;
 
-  &:last-of-type{
+  &:last-of-type {
     border: 0;
 
   }
@@ -82,16 +86,16 @@ justify-content: start;
 .price {
   cursor: pointer;
   background-color: transparent;
- text-align: center;
+  text-align: center;
   color: #4a4a4a;
   font-size: 1.2rem;
   font-weight: 400;
   padding: 0 2rem;
 }
 
-.btn{
+.btn {
 
-  &--add{
+  &--add {
     cursor: pointer;
     background-color: #4a4a4a;
     text-align: center;

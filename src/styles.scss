@@ -21,6 +21,7 @@
 @import 'app/styles/atoms/buttons.scss';
 @import 'app/styles/atoms/form-control-checkbox';
 @import 'app/styles/atoms/form-control-radio';
+@import 'app/styles/atoms/form-group-control';
 
 // molecules
 @import 'app/styles/molecules/rating.scss';
@@ -30,6 +31,13 @@
 @import 'app/styles/organisms/search-form.scss';
 @import 'app/styles/organisms/card.scss';
 @import 'app/styles/organisms/navbar.scss';
+
+//bootstrap
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/transitions';
+@import 'node_modules/bootstrap/scss/modal';
 
 
 
@@ -178,4 +186,3 @@
 /* ----------------------------------------
  MEDIA
 ---------------------------------------- */
-

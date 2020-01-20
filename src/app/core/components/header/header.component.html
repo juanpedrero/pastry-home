@@ -1,58 +1,59 @@
 <!-- NO LOGGED TEMPLATE -->
 <header class="web-header">
-<div *ngIf="isLogged(), else Logged">
-    <div class="container">
-      <nav class="navbar">
-        <h1 [routerLink]="['/']" class="navbar__heading">PastryHome</h1>
-        <div class="menu-header">
-          <div class="navbar__user">
-            <!-- <button type="button" class="navbar__user-name" href="#signin"
-        (click)="toShow()">Signup</button> -->
+  <div *ngIf="isLogged(), else Logged">
+      <div class="container">
+          <nav class="navbar">
+            <a [routerLink]="['/']" class="navbar__heading">PastryHome</a>
+            <div class="navbar__user">
+              <a href="#" class="navbar__user-profile">
+                <i class="large material-icons" >account_circle</i>
+                <!-- <img src="../../../../assets/images/avatar.jpg" alt="" class="navbar__user-avatar "> -->
+                <span class="navbar__user-name">User Name</span>
+              </a>
+              <button class="btn btn--user-menu" type="button" (click)="openDropdownLogin()">
+                <i class="large material-icons">keyboard_arrow_down</i>
+              </button>
+              <app-dropdown-login-user *ngIf="isDropdownLoginOpen"></app-dropdown-login-user>
+              <div [routerLink]="['/cart']" class="cart">
+                <i class="large material-icons">shopping_cart</i>
+              </div>
+            </div>
 
-            <a [routerLink]="['/register']"  role="button" class="navbar__user-name">Regístrate</a>
-            <a [routerLink]="['/login']" role="button" class="navbar__user-name">Inicia sesión</a>
-          </div>
-          <div [routerLink]="['/cart']" class="cart">
-            <svg class="cart-icon" width="30" height="30">
-              <use xlink:href="/assets/svg/sprite.svg#cart"></use>
-            </svg>
-          </div>
+
+          </nav>
         </div>
-      </nav>
-
-      <!-- <app-login *ngIf="isLoginOpen" (closeLogin)="openLogin()"></app-login>
-      <app-signup *ngIf="isSignupOpen" (closeSignup)="openSignup()"></app-signup> -->
-
-
-    </div>
 
 
 
-</div> <!-- NO LOGGED TEMPLATE -->
+  </div> <!-- NO LOGGED TEMPLATE -->
 
-<!-- LOGGED TEMPLATE -->
-<ng-template #Logged>
-    <div class="container">
-      <nav class="navbar">
-        <a [routerLink]="['/']" class="navbar__heading">PastryHome</a>
-        <div class="navbar__user">
-          <a href="#" class="navbar__user-profile">
-            <img src="../../../../assets/images/avatar.jpg" alt="" class="navbar__user-avatar ">
-            <span class="navbar__user-name">User Name</span>
-          </a>
-          <button class="btn btn--user-menu" type="button">
-            ▼
-          </button>
-          <div [routerLink]="['/cart']" class="cart">
-            <svg class="cart-icon" width="30" height="30">
-              <use xlink:href="/assets/svg/sprite.svg#cart"></use>
-            </svg>
-          </div>
+  <!-- LOGGED TEMPLATE -->
+  <ng-template #Logged>
+      <div class="container">
+          <nav class="navbar">
+            <h1 [routerLink]="['/']" class="navbar__heading">PastryHome</h1>
+            <div class="menu-header">
+              <div class="navbar__user">
+                <!-- <button type="button" class="navbar__user-name" href="#signin"
+            (click)="toShow()">Signup</button> -->
+
+                <a [routerLink]="['/register']"  role="button" class="navbar__user-name">Regístrate</a>
+                <a [routerLink]="['/login']" role="button" class="navbar__user-name">Inicia sesión</a>
+              </div>
+              <!-- <div [routerLink]="['/cart']" class="cart">
+                <i class="material-icons">shopping_cart</i>
+              </div> -->
+            </div>
+          </nav>
+
+          <!-- <app-login *ngIf="isLoginOpen" (closeLogin)="openLogin()"></app-login>
+          <app-signup *ngIf="isSignupOpen" (closeSignup)="openSignup()"></app-signup> -->
+
+
         </div>
-      </nav>
-    </div>
-</ng-template><!-- LOGGED TEMPLATE -->
-</header>
+  </ng-template><!-- LOGGED TEMPLATE -->
+  </header>
+
 
 
 

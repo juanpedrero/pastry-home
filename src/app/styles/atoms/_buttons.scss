@@ -35,3 +35,22 @@
   font-family: $font-muli;
   font-size: 20px;
 }
+
+.btn--primary {
+  color: $blue-200;
+  background-color: transparent;
+  box-shadow: none;
+
+}
+
+.btn--cart{
+  background-color: $primary-color;
+  border-radius: $br8;
+}
+
+.btn--remove {
+  background-color: $primary-color;
+  border-radius: $br8;
+  width: 100%;
+  margin: 0;
+}

@@ -64,9 +64,9 @@ export class HomeComponent implements OnInit {
 
 
 
-  public onItemSelect(item) {
-    console.log('hola', item)
-  }
+  // public onItemSelect(item) {
+  //   console.log('hola', item)
+  // }
 
   submit(form) {
     console.log(form.value);

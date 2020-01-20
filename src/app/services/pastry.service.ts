@@ -3,6 +3,7 @@ import { Pastry } from '../types/pastry';
 import { AuthorService } from './author.service';
 import { Author } from '../types/author';
 import { CategoryService } from './category.service';
+import { TransferState } from '@angular/platform-browser';
 
 
 @Injectable({
@@ -55,6 +56,8 @@ export class PastryService {
     return filledList;
   }
 
+  getPastryList
+
   getPastries(): Pastry[] {
     return [
       {
@@ -74,6 +77,14 @@ export class PastryService {
           'huevos, ',
           'leche, '
         ],
+        typeOf: 'tarta',
+        allergy: [
+          'leche' ,
+          'huevos'
+        ],
+        ocassion: [
+          'Con amigos',
+        ],
       },
       {
         id: 2,
@@ -91,6 +102,14 @@ export class PastryService {
           'huevos, ',
           'leche y ',
           'chocolate'
+        ],
+        typeOf: 'tarta',
+        allergy: [
+          'leche' ,
+          'huevos'
+        ],
+        ocassion: [
+          'Con amigos',
         ],
       },
       {
@@ -110,6 +129,14 @@ export class PastryService {
           'huevos, ',
           'leche y ',
           'queso'
+        ],
+        typeOf: 'tarta',
+        allergy: [
+          'huevos'
+        ],
+        ocassion: [
+          'Con amigos',
+          'Cumpleaños'
         ],
       },
       {
@@ -131,6 +158,15 @@ export class PastryService {
           'leche y ',
           'queso ',
         ],
+        typeOf: 'tarta',
+        allergy: [
+          'leche' ,
+          'soja'
+        ],
+        ocassion: [
+          'Con amigos',
+          'Comunion'
+        ],
       },
       {
         id: 5,
@@ -150,6 +186,16 @@ export class PastryService {
           'leche. ',
           'queso, ',
         ],
+        typeOf: 'tarta',
+        allergy: [
+          'soja' ,
+          'huevos'
+        ],
+        ocassion: [
+          'Con amigos',
+          'Comunion',
+          'Cumpleaños'
+        ],
       },
       {
         id: 6,
@@ -166,6 +212,13 @@ export class PastryService {
           'Harina de arroz, ',
           'agua y ',
           'sal',
+        ],
+        typeOf: 'postre',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
         ],
       },
       {
@@ -187,6 +240,15 @@ export class PastryService {
           'leche y ',
           'queso',
         ],
+        typeOf: 'postre',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
+          'Cumpleaños',
+          'Con amigos'
+        ],
       },
       {
         id: 8,
@@ -206,22 +268,15 @@ export class PastryService {
           'mantequilla y ',
           'chocolate',
         ],
-      },
-      {
-        id: 9,
-        img: '../assets/images/strawberrie.jpg',
-        name: "Tarta de Fresa",
-        idAuthor: 1,
-        description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
-        rating: 3.5,
-        price: 17,
-        categories: [
-          'Sin gluten',
+        typeOf: 'postre',
+        allergy: [
+          'gluten' ,
+          'soja'
         ],
-        ingredients: [
-          'Harina, ',
-          'huevos y ',
-          'leche',
+        ocassion: [
+          'Con amigos',
+          'Comunion',
+          'Boda'
         ],
       },
       {
@@ -240,9 +295,16 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
+        typeOf: 'postre',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
+        ],
       },
       {
-        id: 9,
+        id: 10,
         img: '../assets/images/strawberrie.jpg',
         name: "Tarta de Fresa",
         idAuthor: 1,
@@ -257,9 +319,18 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
+        typeOf: 'tarta',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
+          'baby shower'
+        ],
+
       },
       {
-        id: 9,
+        id: 11,
         img: '../assets/images/strawberrie.jpg',
         name: "Tarta de Fresa",
         idAuthor: 1,
@@ -274,9 +345,16 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
+        typeOf: 'postre',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
+        ],
       },
       {
-        id: 9,
+        id: 12,
         img: '../assets/images/strawberrie.jpg',
         name: "Tarta de Fresa",
         idAuthor: 1,
@@ -291,9 +369,16 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
+        typeOf: 'postre',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
+        ],
       },
       {
-        id: 9,
+        id: 13,
         img: '../assets/images/strawberrie.jpg',
         name: "Tarta de Fresa",
         idAuthor: 1,
@@ -308,9 +393,16 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
+        typeOf: 'postre',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
+        ],
       },
       {
-        id: 9,
+        id: 14,
         img: '../assets/images/strawberrie.jpg',
         name: "Tarta de Fresa",
         idAuthor: 1,
@@ -324,10 +416,41 @@ export class PastryService {
           'Harina, ',
           'huevos y ',
           'leche',
+        ],
+        typeOf: 'postre',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
+        ],
+      },
+      {
+        id: 15,
+        img: '../assets/images/strawberrie.jpg',
+        name: "Tarta de Fresa",
+        idAuthor: 1,
+        description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
+        rating: 3.5,
+        price: 17,
+        categories: [
+          'Sin gluten',
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos y ',
+          'leche',
+        ],
+        typeOf: 'postre',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
         ],
       },
             {
-        id: 9,
+        id: 16,
         img: '../assets/images/strawberrie.jpg',
         name: "Tarta de Fresa",
         idAuthor: 1,
@@ -341,6 +464,13 @@ export class PastryService {
           'Harina, ',
           'huevos y ',
           'leche',
+        ],
+        typeOf: 'postre',
+        allergy: [
+          'gluten'
+        ],
+        ocassion: [
+          'Con amigos',
         ],
       },
     ];

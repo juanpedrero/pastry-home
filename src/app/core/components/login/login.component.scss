@@ -1,4 +1,7 @@
-:host{
+@import 'src/app/styles/partials/_variables.scss';
+
+
+:host {
   height: calc(100vh - 80px);
 }
 
@@ -6,13 +9,13 @@
   display: block;
 }
 
-.form--login{
+.form--login {
   // display: block;
   margin-top: 2rem;
   width: 30%;
 }
 
-.h4--login{
+.h4--login {
   font-family: 'Average', serif;
   text-transform: uppercase;
   padding: 0;
@@ -20,7 +23,7 @@
 
 }
 
-.container--login{
+.container--login {
   align-items: flex-end;
   padding: 0;
   font-family: 'Average', serif;
@@ -32,7 +35,7 @@
 
 }
 
- .form-group--login{
+.form-group--login {
   margin: 10px 0;
 }
 
@@ -55,7 +58,7 @@
   width: 100%;
 }
 
-.btn--login{
+.btn--login {
   font-size: 1.1rem;
   min-height: 2rem;
   margin: 10px 0;
@@ -71,11 +74,60 @@
 }
 
 // .ng-invalid.ng-touched:not(form),
-.isInvalid{
-  border-left: 4px solid red;
+.isInvalid {
+  border: 2px solid $primary-color;
 }
 
-.warning{
-  color: red;
+.warning {
+  color: $primary-color;
 
 }
+
+
+
+
+
+
+.modal {
+  top: rem(100px);
+
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(50px);
+    border-radius: rem(4px) rem(4px) 0 0;
+    background-color: $primary-color;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: rem(30px);
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+
+    &--danger {
+      color: red;
+    }
+  }
+}
+
+.close {
+  padding: 4px;
+  background: none;
+  border: none;
+  top: 15px;
+  position: absolute;
+  right: 20px;
+
+  &__tag {
+    font-size: 24px;
+    color: white;
+  }
+}
+

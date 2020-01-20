@@ -10,6 +10,7 @@ import { Pastry } from 'src/app/types/pastry';
 export class CartComponent implements OnInit {
   protected cartList: number[];
   protected productList: Pastry[];
+  protected product: Pastry[];
   constructor(private cartService: CartService) { }
 
   ngOnInit() {
@@ -26,4 +27,21 @@ export class CartComponent implements OnInit {
     this.createProductList();
     console.log(this.cartList);
   }
+
+  addProduct(id) {
+    this.cartList.push(id)
+    this.createProductList();
+    console.log(this.cartList);
+  }
+
+  // deleteProduct(id) {
+  //   this.product
+  //   if(this.product(id) > 1){
+  //     this.cartList.splice(id, 1);
+  //     this.createProductList();
+  //   }
+  //   this.cartList.push(id)
+  //   this.createProductList();
+  //   console.log(this.cartList);
+  // }
 }

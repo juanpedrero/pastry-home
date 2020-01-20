@@ -7,7 +7,10 @@ body{
 }
 
 .cart {
+  overflow: hidden;
  margin: 24px;
+ transform: translateX(rem(-204px));
+ transition: transform 0.25s ease-out;
 
  &__title{
   font-family: 'Average', serif;
@@ -19,6 +22,8 @@ body{
 
 .card__product{
   font-family: 'Average', serif;
+  text-align: center;
+
   text-transform: uppercase;
   padding: 0;
   color: #4a4a4a;
@@ -34,6 +39,10 @@ body{
 }
 
 .btn{
+
+  &--cart {
+    margin: 1rem;
+  }
 
   &--login {
       display:inline-block;
@@ -79,4 +88,11 @@ nav:target{
   color:#fff;
 }
 
-
+.number--product {
+  margin: 0 1rem;
+}
+.product {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}

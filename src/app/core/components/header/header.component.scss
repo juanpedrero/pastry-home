@@ -32,6 +32,7 @@
 }
 
 .navbar__user {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,7 +59,7 @@
   padding: 20px 10px;
   font-family: $font-opensans;
   font-weight: 400;
-  color: $white;
+  color: #ff7e75;
 }
 
 .form-group--btn {

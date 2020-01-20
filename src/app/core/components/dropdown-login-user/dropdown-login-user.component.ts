@@ -12,4 +12,8 @@ export class DropdownLoginUserComponent implements OnInit {
   ngOnInit() {
   }
 
+  logout() {
+    localStorage.removeItem('user');
+  }
+
 }
