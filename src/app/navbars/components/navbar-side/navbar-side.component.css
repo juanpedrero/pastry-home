@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Average&display=swap");
+.container-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+  width: 20%;
+  min-width: 200px;
+}
+
+.filter__titlte {
+  font-family: 'Average', serif;
+}
+
+.form-group__label {
+  font-family: 'Average', serif;
+}
+/*# sourceMappingURL=navbar-side.component.css.map */

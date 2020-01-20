@@ -1,10 +1,11 @@
 <!-- <h2>{{categoryName}}</h2> -->
 <div class="container container--flexbox container--result">
 
-<app-navbar-side></app-navbar-side>
+<app-navbar-side (filterPastryListTypeOf)="updatePastryListWithTypeOf($event)" (filterPastryListAllergies)="updatePastryListWithAllergy($event)" ></app-navbar-side>
   <div class="container-card">
     <div class="container-card-results">
      <app-pastry-card *ngFor="let pastry of pastryList" [pastry]="pastry"></app-pastry-card>
     </div>
+    <span *ngIf="pastryList.length === 0">No existen resultados para el filtro aplicado</span>
   </div>
 </div>

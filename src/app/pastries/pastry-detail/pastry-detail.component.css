@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Average&display=swap");
+:host {
+  height: 100vh;
+}
+
+.wrap {
+  margin-top: 3rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container--ingredients {
+  margin-top: 40px;
+  padding: 40px 0 0 0;
+  border-top: 1px solid #4a4a4a;
+}
+
+.img--product {
+  width: rem(662px);
+  height: rem(511px);
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2rem;
+}
+
+.product__title-header {
+  font: 1.5rem "Fjalla One", sans-serif;
+}
+
+.product__title-chips {
+  margin-bottom: 40px;
+}
+
+.product__description-tag {
+  font: 1rem "Average", sans-serif;
+  margin-bottom: 80px;
+}
+
+.product__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product__price {
+  text-align: right;
+}
+
+.author-by {
+  font: 13px "Average", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.author-name {
+  font: 1rem "Average", sans-serif;
+}
+
+.author-pic {
+  margin-right: 1rem;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.chip__name {
+  margin-right: 1rem;
+  padding-right: 0.55rem;
+  border-right: 1px solid #4a4a4a;
+  font: 1rem "Average", sans-serif;
+  cursor: pointer;
+}
+
+.chip__name:last-of-type {
+  border: 0;
+}
+
+.price {
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0 2rem;
+}
+
+.btn--add {
+  cursor: pointer;
+  background-color: #4a4a4a;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0 2rem;
+}
+/*# sourceMappingURL=pastry-detail.component.css.map */

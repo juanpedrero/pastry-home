@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,sEAAI;AACZ,OAAO,CAAC,mEAAI;AAGZ,AAAA,iBAAiB,CAAC;EAChB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,IAAI;EAClB,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,KAAK;CAChB;;AAED,AAAA,eAAe,CAAC;EACd,WAAW,EAAE,gBAAgB;CAE9B;;AAQE,AAAD,kBAAQ,CAAA;EACN,WAAW,EAAE,gBAAgB;CAE9B",
+    "sources": [
+        "navbar-side.component.scss"
+    ],
+    "names": [],
+    "file": "navbar-side.component.css"
+}

@@ -1,0 +1,37 @@
+.dropdown-login {
+  position: absolute;
+  top: calc(100%);
+  right: 1.5rem;
+  border-radius: 0.5rem;
+  width: 12rem;
+  z-index: 10;
+}
+
+.dropdown-login__link {
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: left;
+  background-color: #ffffff;
+  border: none;
+  color: #ff7e75;
+  text-decoration: none;
+}
+
+.dropdown-login__link:hover {
+  background-color: #ff7e75;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.dropdown-login__btn {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #ff7e75;
+  border-top: 1px solid #ff7e75;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=dropdown-login-user.component.css.map */

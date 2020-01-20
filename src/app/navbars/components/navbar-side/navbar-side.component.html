@@ -3,50 +3,22 @@
 
     <form for="form-side" class="custom__select custom__select--result">
       <h2 class="filter__title">Tipo de dulce</h2>
-      <div class="form-control__checkbox ">
+      <div class="form-control__checkbox " *ngFor="let filter of pastryFilterListTypeOf" (change)="updateListTypeOf($event)">
         <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox1" value="cake" >
+          <input type="checkbox" aria-describedby="checkboxNote" id="cbox1" [value]="filter.value" routerLinkActive="filter.value"  >
           <span class="form-control__indicator"></span>
-          <span class="form-control__description">Tarta</span>
-        </label>
-      </div>
-      <div class="form-control__checkbox ">
-        <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox2" value="dessert" >
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Postre</span>
-        </label>
-      </div>
-      <div class="form-control__checkbox ">
-        <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox3" value="iceCream">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Helado</span>
-        </label>
-      </div>
-      <div class="form-control__checkbox ">
-        <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox4" value="teaBiscuit">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Pastas</span>
-        </label>
-      </div>
-      <div class="form-control__checkbox ">
-        <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox5" value="chocolate">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Chocolate</span>
+          <span class="form-control__description">{{filter.name}}</span>
         </label>
       </div>
       <h2 class="filter__title">¿Alergías y/o intolerancias?</h2>
-      <div class="form-control__checkbox ">
+      <div class="form-control__checkbox " *ngFor="let filter of pastryFilterListAllergies" (change)="updateListAlergies($event)">
         <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox6" value="gluten">
+          <input type="checkbox" aria-describedby="checkboxNote" id="cbox6" [value]="filter.value">
           <span class="form-control__indicator"></span>
-          <span class="form-control__description">Gluten</span>
+          <span class="form-control__description">{{filter.name}}</span>
         </label>
       </div>
-      <div class="form-control__checkbox ">
+      <!-- <div class="form-control__checkbox ">
         <label>
           <input type="checkbox" aria-describedby="checkboxNote" id="cbox7" value="egg">
           <span class="form-control__indicator"></span>
@@ -80,7 +52,7 @@
           <span class="form-control__indicator"></span>
           <span class="form-control__description">Leche</span>
         </label>
-      </div>
+      </div> -->
       <h2 class="filter__title">Ocasión</h2>
       <div class="form-control__radio">
         <label>

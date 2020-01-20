@@ -56,7 +56,54 @@ export class PastryService {
     return filledList;
   }
 
-  getPastryList
+  createListWithTypeOfFilters(list: Pastry[], filters: string[]): Pastry[]{
+    let newArray = [];
+    filters.forEach((filter) => {
+      const filteredArray = list.filter((element) => {
+        const index = element.typeOf.findIndex(e => filter === e);
+        return index !== -1;
+      })
+
+      newArray = newArray.concat(filteredArray);
+    });
+    return newArray;
+  }
+
+  createListWithAlleriesFilters(list: Pastry[], filters: string[]): Pastry[]{
+    let newArray2 = [];
+    filters.forEach((filter) => {
+      const filteredArray = list.filter((element) => {
+        const index = element.typeOf.findIndex(e => filter === e);
+        return index !== -1;
+      })
+
+      newArray2 = newArray2.concat(filteredArray);
+    });
+    return newArray2;
+  }
+
+  getPastryFiltersTypeOf(): Object[] {
+    return [
+      {name: 'Tarta', value: 'cake'},
+      {name: 'Postre', value: 'dessert'} ,
+      {name: 'Helado', value: 'iceCream'},
+      {name: 'Pastas', value: 'teaBiscuit'},
+      {name: 'Chocolate', value: 'chocolate'}
+    ]
+  }
+
+  getPastryFiltersAllergy(): Object[] {
+    return [
+      {name: 'Gluten', value: 'gluten'},
+      {name: 'Huevo', value: 'egg'} ,
+      {name: 'Frutos Secos', value: 'nuts'},
+      {name: 'Cacahuete', value: 'peanuts'},
+      {name: 'Soja', value: 'soja'},
+      {name: 'Leche', vaue: 'milk'}
+    ]
+  }
+
+
 
   getPastries(): Pastry[] {
     return [
@@ -77,7 +124,7 @@ export class PastryService {
           'huevos, ',
           'leche, '
         ],
-        typeOf: 'tarta',
+        typeOf: ['cake', 'dessert'],
         allergy: [
           'leche' ,
           'huevos'
@@ -103,7 +150,7 @@ export class PastryService {
           'leche y ',
           'chocolate'
         ],
-        typeOf: 'tarta',
+        typeOf: ['cake'],
         allergy: [
           'leche' ,
           'huevos'
@@ -130,7 +177,7 @@ export class PastryService {
           'leche y ',
           'queso'
         ],
-        typeOf: 'tarta',
+        typeOf: ['cake'],
         allergy: [
           'huevos'
         ],
@@ -158,7 +205,7 @@ export class PastryService {
           'leche y ',
           'queso ',
         ],
-        typeOf: 'tarta',
+        typeOf: ['cake'],
         allergy: [
           'leche' ,
           'soja'
@@ -186,7 +233,7 @@ export class PastryService {
           'leche. ',
           'queso, ',
         ],
-        typeOf: 'tarta',
+        typeOf: ['cake'],
         allergy: [
           'soja' ,
           'huevos'
@@ -213,7 +260,7 @@ export class PastryService {
           'agua y ',
           'sal',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten'
         ],
@@ -240,7 +287,7 @@ export class PastryService {
           'leche y ',
           'queso',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten'
         ],
@@ -268,7 +315,7 @@ export class PastryService {
           'mantequilla y ',
           'chocolate',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten' ,
           'soja'
@@ -295,7 +342,7 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten'
         ],
@@ -319,7 +366,7 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
-        typeOf: 'tarta',
+        typeOf: ['cake'],
         allergy: [
           'gluten'
         ],
@@ -345,7 +392,7 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten'
         ],
@@ -369,7 +416,7 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten'
         ],
@@ -393,7 +440,7 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten'
         ],
@@ -417,7 +464,7 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten'
         ],
@@ -441,7 +488,7 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten'
         ],
@@ -465,7 +512,7 @@ export class PastryService {
           'huevos y ',
           'leche',
         ],
-        typeOf: 'postre',
+        typeOf: ['postre'],
         allergy: [
           'gluten'
         ],

@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Average&display=swap");
+:host {
+  height: calc(100vh - 82px);
+}
+
+.wrap {
+  margin-top: 3rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container--author {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 30px;
+}
+
+.author {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2rem;
+}
+
+.author__title {
+  font: 1.5rem "Fjalla One", sans-serif;
+}
+
+.author__title-chips {
+  margin-bottom: 40px;
+}
+
+.author__description-tag {
+  font: 1rem "Average", sans-serif;
+  margin-bottom: 80px;
+}
+
+.author__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.author__price {
+  text-align: right;
+}
+
+.author-by {
+  font: 13px "Average", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.author-name {
+  font: 1rem "Average", sans-serif;
+}
+
+.author-pic {
+  margin-right: 1rem;
+  width: 25%;
+}
+
+.chip__name {
+  margin-right: 1rem;
+  padding-right: 0.55rem;
+  border-right: 1px solid #4a4a4a;
+  font: 1rem "Average", sans-serif;
+  cursor: pointer;
+}
+
+.chip__name:last-of-type {
+  border: 0;
+}
+
+.price {
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0 2rem;
+}
+
+.btn--add {
+  cursor: pointer;
+  background-color: #4a4a4a;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0 2rem;
+}
+/*# sourceMappingURL=baker.component.css.map */

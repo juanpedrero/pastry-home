@@ -14,6 +14,7 @@ export class DropdownLoginUserComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('user');
+
   }
 
 }

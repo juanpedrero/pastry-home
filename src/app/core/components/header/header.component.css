@@ -1,0 +1,100 @@
+/* ----------------------------------------
+  WEB-HEADER
+---------------------------------------- */
+.web-header {
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 0 35px 0 15px;
+  background-color: #ffffff;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__heading {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  color: #ff7e75;
+  background-color: transparent;
+  font-size: 36px;
+  line-height: 1.6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar__heading:focus {
+  outline: none;
+}
+
+.navbar__user {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar__user-profile {
+  text-decoration: none;
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 5rem;
+}
+
+.navbar__user-avatar {
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.navbar__user-name {
+  text-decoration: none;
+  padding: 20px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #ff7e75;
+}
+
+.form-group--btn {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn--form {
+  text-align: center;
+  font-size: 1.15rem;
+  font-family: 'Average', serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #4a4a4a;
+  border-radius: 0;
+}
+/*# sourceMappingURL=header.component.css.map */
