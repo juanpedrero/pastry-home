@@ -1,5 +1,9 @@
+@import 'src/app/styles/partials/_variables.scss';
+
+
+
 :host {
-  height: calc(100vh);
+  min-height: calc(100vh);
 }
 
 .form-group--btn {
@@ -35,7 +39,7 @@
   margin-bottom: 24px;
   padding: 10px;
   text-align: left;
-  font-family: 'Average', serif;
+  font-family: $font-muli;
   color: #4a4a4a;
   font-weight: 400;
   font-size: 1.2rem;
@@ -71,6 +75,7 @@
 
 .form-group {
   margin: 10px;
+  position: relative;
 
   &--typeclient {
     margin-left: 0;
@@ -99,6 +104,7 @@
   width: 100%;
   border: 1px solid #757575;
   border-radius: 4px;
+  padding-left: 1rem;
 
   &--typeclient {
     width: 10px;
@@ -121,5 +127,16 @@
 }
 
 .isInvalid {
-  border-left: 4px solid red;
+  border: 2px solid red;
+  outline: none;
+}
+
+.eye {
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  top: 2.5rem;
+  right: 1rem;
+  color: black;
+  cursor: pointer;
 }

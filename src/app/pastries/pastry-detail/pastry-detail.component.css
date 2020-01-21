@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Average&display=swap");
 :host {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .wrap {
@@ -37,7 +37,7 @@
 }
 
 .product__title-header {
-  font: 1.5rem "Fjalla One", sans-serif;
+  font: 1.5rem "Muli", sans-serif;
 }
 
 .product__title-chips {
@@ -45,7 +45,7 @@
 }
 
 .product__description-tag {
-  font: 1rem "Average", sans-serif;
+  font: 1rem "Open Sans", sans-serif;
   margin-bottom: 80px;
 }
 
@@ -59,28 +59,20 @@
   text-align: right;
 }
 
-.author-by {
-  font: 13px "Average", sans-serif;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.author-name {
-  font: 1rem "Average", sans-serif;
-}
-
-.author-pic {
-  margin-right: 1rem;
-  height: 100px;
-  width: 100px;
-  cursor: pointer;
-}
-
 .chip__name {
   margin-right: 1rem;
   padding-right: 0.55rem;
   border-right: 1px solid #4a4a4a;
-  font: 1rem "Average", sans-serif;
+  font: 1rem "Open Sans", sans-serif;
   cursor: pointer;
+}
+
+.chip__name:link {
+  color: #ff7e75;
+}
+
+.chip__name:visited {
+  color: #898989;
 }
 
 .chip__name:last-of-type {

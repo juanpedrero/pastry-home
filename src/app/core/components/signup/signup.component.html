@@ -45,19 +45,23 @@
             <label class="form-group__label" for="password">Contraseña</label>
             <input
             class="form-group__control"
-            type="password"
+            [type]="passwordType"
             required
+            minlength="4"
             id="password"
             name="contraseña"
             [(ngModel)]="user.password"
             #password="ngModel"
             [ngClass]="{isInvalid: password?.touched && !password?.valid}" >
+            <svg class="eye" alt="Show passwords" (click)="showPassword()" >
+              <use [attr.xlink:href]="showPasswordSvg"></use>
+            </svg>
           </div>
           <div class="form-group">
             <label class="form-group__label" for="repeatPassword">Repita contraseña</label>
             <input
             class="form-group__control"
-            type="password"
+            [type]="passwordType"
             required
             id="repeatPassword"
             name="repeatPassword"
