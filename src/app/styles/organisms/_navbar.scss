@@ -7,6 +7,9 @@
   background-color: transparent;
   padding: 0 35px 0 15px;
   background-color: rgba(255, 161, 144, 1);
+  box-shadow: 0 15px 25px 0 rgba(181, 181, 181, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
 .navbar {

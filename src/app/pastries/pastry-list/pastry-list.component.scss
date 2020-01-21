@@ -165,7 +165,7 @@ table {
 }
 
 .container--flexbox {
-   padding: 2rem 2rem;
+   padding: 0 2rem;
    display: flex;
    justify-content: space-between;
 }
@@ -178,6 +178,7 @@ table {
 // }
 
 .container-card {
+  padding: 40px 20px;
    flex: 1 1 auto;
 }
 

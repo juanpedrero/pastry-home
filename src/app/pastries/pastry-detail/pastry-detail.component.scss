@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Average&display=swap');
 
+// partials
+@import '../../styles/partials/variables.scss';
+
 :host{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .wrap {
@@ -34,7 +37,9 @@
   &__title {
 
     &-header{
-      font: 1.5rem "Fjalla One", sans-serif;
+      font-family: $font-muli;
+      font-size: 44px;
+      font-weight: 700;
     }
 
     &-chips{
@@ -45,7 +50,9 @@
   &__description {
 
     &-tag {
-          font: 1rem "Average", sans-serif;
+          font-family: $font-opensans;
+          font-size: 16px;
+          line-height: 26px;
           margin-bottom: 80px;
     }
   }
