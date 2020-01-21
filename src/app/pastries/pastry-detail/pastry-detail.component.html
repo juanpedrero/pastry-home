@@ -6,8 +6,8 @@
         <section class="product__title">
           <h1 class="product__title-header">{{pastry.name}}</h1>
           <div class="product__title-chips">
-            <span *ngFor="let category of pastry.categories" [routerLink]="['/category', category.toLowerCase()]"
-              class="chip__name">{{category}}</span>
+            <a *ngFor="let category of pastry.categories" [routerLink]="['/category', category.toLowerCase()]"
+              class="chip__name">{{category}}</a>
           </div>
         </section>
 

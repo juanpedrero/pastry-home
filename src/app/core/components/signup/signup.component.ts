@@ -13,13 +13,17 @@ export class SignupComponent implements OnInit {
   private passwordType: string
   private user: User
   private password: string
+  private showPasswordSvg: string
+
 
   constructor() {
-    this.eye = '/assets/sprite.svg#eye';
-    this.eyeSlash = '/assets/sprite.svg#eye-slash';
+    this.eye = '/assets/svg/sprite.svg#openeye';
+    this.eyeSlash = '/assets/svg/sprite.svg#closeye';
     this.user = new User("", "", "", "", "");
     this.passwordType = 'password';
     this.password = ''
+    this.showPasswordSvg = this.eye;
+
    }
 
 
@@ -34,10 +38,10 @@ export class SignupComponent implements OnInit {
   showPassword() {
     if(this.passwordType==='password') {
       this.passwordType = 'text';
-      this.eye = this.eyeSlash;
+      this.showPasswordSvg = this.eyeSlash;
      } else {
       this.passwordType = 'password';
-      this.eyeSlash = this.eye;
+      this.showPasswordSvg = this.eye;
      }
   }
 }

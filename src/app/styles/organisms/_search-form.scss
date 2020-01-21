@@ -15,7 +15,7 @@
   width:250px;
   background: $white;
   margin-right: 10px;
-  border-radius: 8px;
+  border-radius: $br8;
   border: 1px solid $gray-100;
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.1);
   //border: 3px solid $green-100;
@@ -28,12 +28,29 @@
 
   }
   & .selected-list .c-list .c-token {
-    background-color: #ffa190;
+    background-color: $primary-color;
+    border-radius: $br8;
 
+
+    & .c-label{
+      color: $white;
+      font-weight: bold;
+    }
   }
   &.custom-class.ng-valid.ng-touched:not(form) {
-    border: 2px solid #4a4a4a;
+    border: 2px solid $blue-200;
   }
+
+  & .select-all span {
+    font-family: $font-opensans;
+    color: tomato;
+
+  }
+
+  & .dropdown-list ul li {
+    font-family: $font-opensans;
+  }
+
   .selected-list .c-btn {
     padding: 15px;
   }
