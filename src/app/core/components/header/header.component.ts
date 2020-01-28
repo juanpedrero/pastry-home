@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
+import { Observable } from 'rxjs';
+import { Pastry } from 'src/app/types/pastry';
 
 @Component({
   selector: 'app-header',
@@ -8,18 +11,38 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
 
+  public shoppingCartItems$: Observable<Pastry[]>;
+  public shoppingCartItems: Pastry[] = [];
+
   private isDropdownLoginOpen: boolean;
   // private isSignupOpen: boolean;
 
   // private isShown = false;
 
-  constructor() {
+  constructor(private cartService: CartService) {
     // this.isSignupOpen = false
     // this.isLoginOpen = false
+    // this.shoppingCartItems$ = this.cartService.getItems();
+    // this.shoppingCartItems$.subscribe( data => this.shoppingCartItems = data);
+
+
     this.isDropdownLoginOpen = false
    }
 
   ngOnInit() {
+    this.shoppingCartItems$ = this
+    .cartService
+    .getItems();
+
+ this.shoppingCartItems$.subscribe( data => this.shoppingCartItems = data);
+  }
+
+  getTotal(pastries){
+    let total = 0;
+    pastries.forEach(pastry => {
+      total = total + pastry.quantity
+    })
+    return total;
   }
 
   // openLogin(): void {
@@ -42,6 +65,11 @@ export class HeaderComponent implements OnInit {
     this.isDropdownLoginOpen = !this.isDropdownLoginOpen
 
   }
+
+  // getLengthCart(){
+  //   // console.log(this.cartService.getCartLength());
+  //   return this.cartService.getCartLength();
+  // }
 
 //   toShow(): void{
 //     this.isShown = !(this.isShown);

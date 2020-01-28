@@ -15,9 +15,11 @@ import { CustomerComponent } from './profiles/customer/customer.component';
 import { ProfilesModule } from './profiles/profiles.module';
 import { NavbarHomeComponent } from './navbars/components/navbar-home/navbar-home.component';
 import { NavbarSideComponent } from './navbars/components/navbar-side/navbar-side.component';
-import { CartComponent } from './shared/cart/cart.component';
+// import { CartComponent } from './shared/cart/cart.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { StarRatingModule } from 'angular-star-rating';
+import { SharedModule } from './shared/shared.module';
+import { PastryFilteredComponent } from './pastries/pastry-filtered/pastry-filtered.component';
 //import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 
 
@@ -32,13 +34,15 @@ import { StarRatingModule } from 'angular-star-rating';
     CustomerComponent,
     NavbarHomeComponent,
     NavbarSideComponent,
-    CartComponent,
+    // CartComponent,
     CategoryListComponent,
+    PastryFilteredComponent,
   ],
   imports: [
     CoreModule,
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     //AngularMultiSelectModule,
    // ModalsModule,
     ProfilesModule,

@@ -10,6 +10,7 @@ import { PastryListComponent } from './pastries/pastry-list/pastry-list.componen
 import { CartComponent } from './shared/cart/cart.component';
 import { SignupComponent } from './core/components/signup/signup.component';
 import { LoginComponent } from './core/components/login/login.component';
+import { PastryFilteredComponent } from './pastries/pastry-filtered/pastry-filtered.component';
 
 
 
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: SignupComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'product/result', component: PastryListComponent},
+  {path: 'product/result', component: PastryFilteredComponent},
   {path: 'category/:category', component: PastryListComponent},
   {path: 'product/:id', component: PastryDetailComponent},
   {path: 'baker/:id', component: BakerComponent},

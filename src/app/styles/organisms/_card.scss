@@ -1,3 +1,6 @@
+@import '../partials/variables';
+
+
 .card__image {
   height: 150px;
   width: 242px;
@@ -9,6 +12,12 @@
 .card__info {
   padding: 10px;
 }
+.card__price{
+  padding: 10px;
+  font-size: 1rem;
+  color:$gray-400;
+}
+
 .card-link{
   text-decoration: none;
 }
@@ -30,7 +39,7 @@
 .baker__name {
   margin-right: 1.5rem;
   font-family: $font-opensans;
-  font-size: 14px;
+  font-size: 1rem;
   color: $gray-300;
 }
 
@@ -57,6 +66,7 @@
   width: 242px;
   //  height: 10%;
   margin-right: 30px;
+  margin-bottom: 0.5rem;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid $gray;
@@ -115,7 +125,7 @@
 
   .card__title {
     margin-bottom: 1.25rem;
-    color: #696969;
+    color: $gray-400;
     font-family: 'Fjalla One', sans-serif;
     font-size: 1.25rem;
     font-weight: 300;
@@ -139,9 +149,6 @@
   //     align-items: flex-end;
   //  }
 
-  .checked {
-    color: orange;
-  }
 
   /* ----------------------------------------
  Star-rating

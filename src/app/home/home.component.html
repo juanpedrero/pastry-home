@@ -4,22 +4,22 @@
   <div class="app-header-search">
     <h1 class="heading__h1">¿Qué estás buscando?</h1>
     <h2 class="heading__h2">¡Los mejores dulces de nuestros reposteros para cualquier ocasión y evento!</h2>
-    <form class="custom__select custom__select--home" (ngSubmit)="submit(searchForm)" #searchForm="ngForm">
+    <form class="custom__select custom__select--home" (ngSubmit)="submit(searchForm)" #formSearch="ngForm">
 
       <angular2-multiselect [data]="typeOfPastry" name="typeOfPastry" [settings]="dropdownSettings"
-        [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)" required>
+        [(ngModel)]="selectedItems"  required >
       </angular2-multiselect>
 
 
-      <angular2-multiselect [data]="allergies" name="allergies" (onSelect)="onItemSelect($event)"
-        [(ngModel)]="selectedItems2" [settings]="dropdownSettings2" required>
+      <angular2-multiselect [data]="allergies" name="allergies"
+        [(ngModel)]="selectedItems2" [settings]="dropdownSettings2" required >
       </angular2-multiselect>
 
-      <angular2-multiselect [data]="ocassion" name="ocassion" (onSelect)="onItemSelect($event)"
-        [(ngModel)]="selectedItems3" [settings]="dropdownSettings3" required>
+      <angular2-multiselect [data]="ocassion" name="ocassion"
+        [(ngModel)]="selectedItems3" [settings]="dropdownSettings3" required >
       </angular2-multiselect>
 
-      <button [routerLink]="['/product/result']" type="submit" class="btn btn--form">Buscar</button>
+      <button  type="submit" class="btn btn--form">Buscar</button>
     </form>
   </div>
   <!-- <div class="container container--form"> -->
@@ -28,6 +28,11 @@
 
   <!-- </div> -->
   <div class="category">
-    <app-category-list *ngFor="let category of categories" [category]="category" class="category"></app-category-list>
+    <app-category-list *ngFor="let category of categories" [category]="category" class="category__content"></app-category-list>
   </div>
 </main>
+
+
+[(ngModel)]="filter.selectedItems" #selectedItems="ngModel"
+
+[routerLink]="['/product/result']"

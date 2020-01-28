@@ -7,7 +7,10 @@
         <div class="card__info-baker">
           <h5 class="baker__name">{{pastry.author.name}}</h5>
           <div class="media__rating card__info-rating baker__rating">
-            <star-rating
+
+            <p class="card__price">
+             {{pastry.price}}  {{getCurrency()}}
+            </p><!-- <star-rating
             [starType]="'svg'"
             [rating]="pastry.rating"
             [labelPosition]="'left'"
@@ -15,7 +18,7 @@
             [size]="'medium'"
             [readOnly]="'true'"
             >
-          </star-rating>
+          </star-rating> -->
           </div>
         </div>
       </div>

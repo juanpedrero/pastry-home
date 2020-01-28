@@ -81,3 +81,10 @@
   background-color: #4a4a4a;
   border-radius: 0;
 }
+
+.cart {
+  display: flex;
+  &__number {
+    font-size: 1.2rem;
+  }
+}

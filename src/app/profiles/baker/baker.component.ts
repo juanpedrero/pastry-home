@@ -21,7 +21,7 @@ export class BakerComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe((params)=>{
       this.idProduct = parseInt(params.id);
-      this.pastry = this.pastryService.getPastryById(this.idProduct);
+      this.pastry = this.pastryService.getProduct(this.idProduct);
       this.pastry.author = this.authorService.getAuthorById(this.pastry.idAuthor);
 
     })

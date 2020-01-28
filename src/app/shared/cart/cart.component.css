@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Average&display=swap");
+@import '../../styles/partials/_variables.scss';
+
 body {
   margin: 20px;
   font-family: sans-serif;
@@ -17,7 +19,7 @@ body {
 }
 
 .cart__title {
-  font-family: 'Average', serif;
+  font-family: $font-opensans;
   text-transform: uppercase;
   padding: 0;
   color: #4a4a4a;

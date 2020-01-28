@@ -13,6 +13,7 @@
 
         <section class="product__description">
           <p class="product__description-tag">{{pastry.description}}</p>
+          <p class="product__description-tag">{{pastry.description2}}</p>
         </section>
         <!-- <section class="product__author">
           <img [routerLink]="['/baker', pastry.author.id]" [src]="pastry.author.img" alt="" class="author-pic">
@@ -34,7 +35,8 @@
       <div class="product__price">
         <section>
           <span class="btn price">{{pastry.price}}€</span>
-          <button class="btn btn--add" (click)="addProduct(i)">Añadir</button>
+          <button class="btn btn--add" (click)="addToCart2(pastry)">Añadir</button>
+          {{message}}
         </section>
       </div>
     </div>

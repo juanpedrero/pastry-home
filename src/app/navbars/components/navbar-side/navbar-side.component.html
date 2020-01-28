@@ -5,81 +5,25 @@
       <h2 class="filter__title">Tipo de dulce</h2>
       <div class="form-control__checkbox " *ngFor="let filter of pastryFilterListTypeOf" (change)="updateListTypeOf($event)">
         <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox1" [value]="filter.value" routerLinkActive="filter.value"  >
+          <input type="checkbox" aria-describedby="checkboxNote" [id]="filter.id" [value]="filter.value">
           <span class="form-control__indicator"></span>
           <span class="form-control__description">{{filter.name}}</span>
         </label>
       </div>
-      <!-- <h2 class="filter__title">¿Alergías y/o intolerancias?</h2>
-      <div class="form-control__checkbox " *ngFor="let filter of pastryFilterListAllergies" (change)="updateListAlergies($event)">
+      <h2 class="filter__title">¿Alergías y/o intolerancias?</h2>
+      <div class="form-control__checkbox " *ngFor="let filter of pastryFilterListAllergies" (change)="updateListAllergies($event)">
         <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox6" [value]="filter.value">
+          <input type="checkbox" aria-describedby="checkboxNote" [id]="filter.id" [value]="filter.value">
           <span class="form-control__indicator"></span>
-          <span class="form-control__description">{{filter.name}}</span>
-        </label>
-      </div> -->
-      <!-- <div class="form-control__checkbox ">
-        <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox7" value="egg">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Huevo</span>
+          <span class="form-control__description">{{filter.allergy}}</span>
         </label>
       </div>
-      <div class="form-control__checkbox ">
-        <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox8" value="nuts">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Frutos Secos</span>
-        </label>
-      </div>
-      <div class="form-control__checkbox ">
-        <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox9" value="peanut">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Cacahuete</span>
-        </label>
-      </div>
-      <div class="form-control__checkbox ">
-        <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox10" value="soja">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Soja</span>
-        </label>
-      </div>
-      <div class="form-control__checkbox ">
-        <label>
-          <input type="checkbox" aria-describedby="checkboxNote" id="cbox11" value="milk">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Leche</span>
-        </label>
-      </div> -->
       <h2 class="filter__title">Ocasión</h2>
-      <div class="form-control__radio">
+      <div class="form-control__checkbox " *ngFor="let filter of pastryFilterListOcassion" (change)="updateListOcassion($event)">
         <label>
-          <input type="radio" aria-describedby="checkboxNote" name="ocassion" value="birthday">
+          <input type="checkbox" aria-describedby="checkboxNote" [id]="filter.id" [value]="filter.value">
           <span class="form-control__indicator"></span>
-          <span class="form-control__description">Cumpleaños</span>
-        </label>
-      </div>
-      <div class="form-control__radio">
-        <label>
-          <input type="radio" aria-describedby="checkboxNote" name="ocassion" value="wedding">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Boda</span>
-        </label>
-      </div>
-      <div class="form-control__radio">
-        <label>
-          <input type="radio" aria-describedby="checkboxNote" name="ocassion" value="babyShower">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Baby Shower</span>
-        </label>
-      </div>
-      <div class="form-control__radio">
-        <label>
-          <input type="radio" aria-describedby="checkboxNote" name="ocassion" value="friends">
-          <span class="form-control__indicator"></span>
-          <span class="form-control__description">Con amigos</span>
+          <span class="form-control__description">{{filter.ocassion}}</span>
         </label>
       </div>
     </form>

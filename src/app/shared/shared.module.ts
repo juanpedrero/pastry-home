@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { CartComponent } from './cart/cart.component';
-
+registerLocaleData(localeEs);
+import localeEs from '@angular/common/locales/es';
 
 const COMPONENTS = [
-  CartComponent
+  CartComponent,
 ]
 
 
@@ -18,6 +19,8 @@ const COMPONENTS = [
   ],
   exports: [
     ...COMPONENTS
-  ]
+  ],
+  providers: [ { provide: LOCALE_ID, useValue: 'es' } ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

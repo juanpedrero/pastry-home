@@ -9,7 +9,7 @@ export class CategoryService {
   constructor(private utilService: UtilService) { }
 
   getCategories(): string[] {
-    return ['Sin gluten', 'Chocolate', 'Vegano', 'Frutas', 'Fritos'];
+    return ['Sin gluten', 'Chocolate', 'Vegano', 'Frutas', 'Fritos', 'Chocolate'];
   }
 
   transformCategoryToSlug(category: string): string {

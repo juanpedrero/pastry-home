@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { PastryService } from '../services/pastry.service';
 import { Pastry } from '../types/pastry';
 import { Author } from '../types/author';
 import { CategoryService } from '../services/category.service';
 import { DropdownService } from '../services/dropdown.service';
 import { NgForm } from '@angular/forms';
+import { Filter } from '../types/filter';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,15 +17,18 @@ export class HomeComponent implements OnInit {
   protected categories: string[];
   protected pastries: Pastry[];
   protected authors: Author[];
+  private filter: Filter;
 
-  constructor(private categoryService: CategoryService, private dropdownService: DropdownService) { }
+  constructor(private categoryService: CategoryService, private dropdownService: DropdownService, private router: Router) {
+    this.filter = new Filter ("", "", "")
+   }
 
 
-  selectedItems = [];
+  selectedItems: any = "";
   dropdownSettings = {};
-  selectedItems2 = [];
+  selectedItems2: any = "";
   dropdownSettings2 = {};
-  selectedItems3 = [];
+  selectedItems3: any = "";
   dropdownSettings3 = {};
 
   private typeOfPastry: Array<Object> = [];
@@ -39,40 +44,43 @@ export class HomeComponent implements OnInit {
     this.ocassion = this.dropdownService.getOcassion();
 
     this.dropdownSettings = {
-      singleSelection: false,
-      enableCheckAll: true,
-      text: 'Tipo de dulce',
+      singleSelection: true,
+      enableCheckAll: false,
+      text: 'Tipos de dulce',
       classes: "dropdown myclass custom-class"
     };
     this.dropdownSettings2 = {
-      singleSelection: false,
-      enableCheckAll: true,
+      singleSelection: true,
+      enableCheckAll: false,
       text: '¿Alergías y/o intolerancias?',
       classes: "dropdown myclass custom-class"
     };
     this.dropdownSettings3 = {
       singleSelection: true,
       enableCheckAll: false,
-      text: 'Ocasión',
+      text: 'Elige un evento',
       classes: "dropdown myclass custom-class"
     };
-
-    console.log(this.typeOfPastry);
-
   }
 
+  submit(form: NgForm){
+    // console.log('hola');
+    // // console.log(this.typeOfPastry);
+    // console.log(this.selectedItems);
+    // console.log(this.selectedItems2);
+    // console.log(this.selectedItems3);
+
+    this.router.navigate(['/product/result'], { queryParams: { type: this.selectedItems[0].itemName, allergie: this.selectedItems2[0].itemName, event: this.selectedItems3[0].itemName}});
+    localStorage.setItem("datos_busqueda",  this.selectedItems[0].itemName);
+    localStorage.setItem("datos_busqueda2",  this.selectedItems2[0].itemName);
+    localStorage.setItem("datos_busqueda3",  this.selectedItems3[0].itemName);
+    // console.log(this.selectedItems3);
+   }
 
 
 
-  // public onItemSelect(item) {
+  // onItemSelect(item: []) {
   //   console.log('hola', item)
   // }
-
-  submit(form) {
-    console.log(form.value);
-  }
-
-
-
 
 }

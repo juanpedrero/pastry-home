@@ -21,8 +21,7 @@
 }
 
 .img--product {
-  width: rem(662px);
-  height: rem(511px);
+    height: 30% ;
 }
 
 .product {
