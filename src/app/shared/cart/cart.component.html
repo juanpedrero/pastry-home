@@ -6,7 +6,7 @@
     <form class="form-cart">
       <ul class = "form__list">
         <li *ngFor="let product of shoppingCartItems; let i = index">
-          <div class="card">
+          <div class="card card--cart">
             <img class="card__image" [src]="product.img" [alt]="product.name">
             <div class="card__product">
               <div class="product">

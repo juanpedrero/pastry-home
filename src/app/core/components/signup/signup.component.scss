@@ -1,4 +1,5 @@
-@import 'src/app/styles/partials/_variables.scss';
+// partials
+@import '../../../styles/partials/variables.scss';
 
 
 
@@ -139,4 +140,57 @@
   right: 1rem;
   color: black;
   cursor: pointer;
+}
+
+.warning {
+  color: $primary-color;
+
+}
+
+.modal {
+  top: rem(100px);
+
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(50px);
+    border-radius: rem(4px) rem(4px) 0 0;
+    background-color: $primary-color;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: inherit;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: rem(30px);
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+
+    &--danger {
+      color: red;
+    }
+  }
+}
+
+.close {
+  padding: 4px;
+  background: none;
+  border: none;
+  top: 15px;
+  position: absolute;
+  right: 20px;
+
+  &__tag {
+    font-size: 24px;
+    color: white;
+  }
 }

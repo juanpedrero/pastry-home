@@ -3,7 +3,7 @@
 <main>
   <div class="app-header-search">
     <h1 class="heading__h1">¿Qué estás buscando?</h1>
-    <h2 class="heading__h2">¡Los mejores dulces de nuestros reposteros para cualquier ocasión y evento!</h2>
+    <h2 class="heading__h2">¡Los mejores dulces para cualquier ocasión!</h2>
     <form class="custom__select custom__select--home" (ngSubmit)="submit(searchForm)" #formSearch="ngForm">
 
       <angular2-multiselect [data]="typeOfPastry" name="typeOfPastry" [settings]="dropdownSettings"
@@ -32,7 +32,7 @@
   </div>
 </main>
 
-
+<!--
 [(ngModel)]="filter.selectedItems" #selectedItems="ngModel"
 
-[routerLink]="['/product/result']"
+[routerLink]="['/product/result']" -->

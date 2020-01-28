@@ -49,7 +49,7 @@
             required
             minlength="4"
             id="password"
-            name="contraseña"
+            name="password"
             [(ngModel)]="user.password"
             #password="ngModel"
             [ngClass]="{isInvalid: password?.touched && !password?.valid}" >
@@ -68,6 +68,9 @@
             [(ngModel)]="user.repeatPassword"
             #repeatPassword="ngModel"
             [ngClass]="{isInvalid: repeatPassword?.touched && !repeatPassword?.valid}" >
+           <!-- <div *ngIf="!passwordEqual()" [ngClass]="{warning: repeatPassword?.touched && !repeatPassword?.valid}">
+              * Las contraseñas no coinciden
+            </div> -->
           </div>
           <div class="form-group">
             <label class="form-group__label" for="city">Ciudad</label>
@@ -83,33 +86,26 @@
           </div>
         </div>
       </fieldset>
-      <!-- <fieldset class="form-fieldset form-fieldset--typecustomer">
-        <legend class="form-legend">¿Qué tipo de usuario eres?</legend>
-        <div class=" form-register form-register--typeclient">
-          <div class="form-group form-group--typeclient">
-            <input
-            class="form-group__control form-group__control--typeclient"
-            type="radio"
-            id="r-01"
-            name="type">
-
-
-            <label class="form-group__label form-group__label--typeclient " for="r-01">Cliente</label>
-          </div>
-          <div class="form-group form-group--typeclient">
-            <input
-            class="form-group__control form-group__control--typeclient"
-            type="radio"
-            id="r-02"
-            name="type"
-            >
-            <label class="form-group__label form-group__label--typeclient" for="r-02">Reposter@</label>
-          </div>
-        </div>
-      </fieldset> -->
       <div class="form-group form-group--btn">
-        <button type="submit" class="btn btn--form" [disabled]="!signupForm.valid">Crea tu cuenta</button>
+        <!-- <button type="submit" class="btn btn--form" [disabled]="!signupForm.valid" data-target="#exampleModal">Crea tu cuenta</button> -->
+        <button type="button" class="btn btn--form" [disabled]="!signupForm.valid" data-toggle="modal" data-target="#Modal">Crea tu cuenta</button>
       </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">¡Gracias por registrarte!</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" [routerLink]="['']">Ir a PastryHome</button>
+      </div>
+    </div>
+  </div>
+</div>
     </form>
+
   </div>
 </div>

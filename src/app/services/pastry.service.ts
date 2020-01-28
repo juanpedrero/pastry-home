@@ -162,9 +162,8 @@ export class PastryService {
           'huevos, ',
           'leche, '
         ],
-        typeOf: ['cake', 'dessert'],
+        typeOf: ['cake'],
         allergy: [
-          'milk',
           'egg'
         ],
         ocassion: [
@@ -194,7 +193,7 @@ export class PastryService {
         typeOf: ['dessert', 'cake'],
         allergy: [
           'milk',
-          'egg'
+
         ],
         ocassion: [
           'babyShower'
@@ -253,7 +252,7 @@ export class PastryService {
         ],
         typeOf: ['cake'],
         allergy: [
-          'milk',
+
           'soja'
         ],
         ocassion: [
@@ -283,7 +282,7 @@ export class PastryService {
         ],
         typeOf: ['chocolate', 'dessert'],
         allergy: [
-          'soja',
+
           'egg'
         ],
         ocassion: [
@@ -370,7 +369,7 @@ export class PastryService {
         typeOf: ['dessert'],
         allergy: [
           'gluten',
-          'soja'
+
         ],
         ocassion: [
           'birthday'
@@ -451,7 +450,7 @@ export class PastryService {
         ],
         typeOf: ['dessert'],
         allergy: [
-          'gluten',
+
           'soja'
         ],
         ocassion: [

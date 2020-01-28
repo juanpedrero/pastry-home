@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
  this.shoppingCartItems$.subscribe( data => this.shoppingCartItems = data);
   }
 
-  getTotal(pastries){
+  getTotal(pastries: Pastry[]){
     let total = 0;
     pastries.forEach(pastry => {
       total = total + pastry.quantity

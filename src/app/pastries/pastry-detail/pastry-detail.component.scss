@@ -20,7 +20,7 @@
   padding: 0 2rem;
 
   &--ingredients{
-    margin-top: 40px;
+    // margin-top: 40px;
     padding:40px 0 0 0;
     border-top: 1px solid #4a4a4a;
   }
@@ -117,9 +117,14 @@
   padding: 0 2rem;
 }
 
+.addCart {
+  text-align: center;
+}
+
 .btn{
 
   &--add{
+    margin-top: 2rem;
     cursor: pointer;
     background-color: #4a4a4a;
     text-align: center;
@@ -129,3 +134,5 @@
     padding: 0 2rem;
   }
 }
+
+

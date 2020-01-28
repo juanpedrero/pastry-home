@@ -13,6 +13,7 @@ export class SignupComponent implements OnInit {
   private passwordType: string
   private user: User
   private password: string
+  private passwordRepeat: string
   private showPasswordSvg: string
 
 
@@ -21,7 +22,6 @@ export class SignupComponent implements OnInit {
     this.eyeSlash = '/assets/svg/sprite.svg#closeye';
     this.user = new User("", "", "", "", "");
     this.passwordType = 'password';
-    this.password = ''
     this.showPasswordSvg = this.eye;
 
    }
@@ -43,6 +43,11 @@ export class SignupComponent implements OnInit {
       this.passwordType = 'password';
       this.showPasswordSvg = this.eye;
      }
+  }
+
+  passwordEqual(): boolean {
+    return this.password === this.passwordRepeat;
+
   }
 }
 
