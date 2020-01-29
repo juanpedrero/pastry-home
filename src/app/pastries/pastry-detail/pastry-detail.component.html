@@ -22,14 +22,15 @@
             <span *ngFor="let ingredient of pastry.ingredients">{{ingredient}}</span>
           </div>
         </div>
+        <section class="addCart">
+          <!-- <span class="btn price">{{pastry.price}}€</span> -->
+         <button class="btn btn--add" (click)="addToCart2(pastry)">Añadir al carro</button>
+       </section>
       </div>
 
       </div>
       <div class="product__price">
-        <section class="addCart">
-           <!-- <span class="btn price">{{pastry.price}}€</span> -->
-          <button class="btn btn--add" (click)="addToCart2(pastry)">Añadir al carro</button>
-        </section>
+
       </div>
     </div>
   </div>

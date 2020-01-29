@@ -33,7 +33,8 @@
     text-decoration: none;
     background-color: $white;
     color: $primary-color;
-    border-top: 1px solid $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: $br8;
     font-family: $font-opensans;
     font-size: 1rem;
 

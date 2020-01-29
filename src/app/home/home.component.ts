@@ -70,10 +70,10 @@ export class HomeComponent implements OnInit {
     // console.log(this.selectedItems2);
     // console.log(this.selectedItems3);
 
-    this.router.navigate(['/product/result'], { queryParams: { type: this.selectedItems[0].itemName, allergie: this.selectedItems2[0].itemName, event: this.selectedItems3[0].itemName}});
-    localStorage.setItem("datos_busqueda",  this.selectedItems[0].itemName);
-    localStorage.setItem("datos_busqueda2",  this.selectedItems2[0].itemName);
-    localStorage.setItem("datos_busqueda3",  this.selectedItems3[0].itemName);
+    this.router.navigate(['/product/result'], { queryParams: { type: this.selectedItems[0].value, allergy: this.selectedItems2[0].value, event: this.selectedItems3[0].value}});
+    localStorage.setItem("datos_busqueda",  this.selectedItems[0].value);
+    localStorage.setItem("datos_busqueda2",  this.selectedItems2[0].value);
+    localStorage.setItem("datos_busqueda3",  this.selectedItems3[0].value);
     // console.log(this.selectedItems3);
    }
 

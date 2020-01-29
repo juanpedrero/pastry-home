@@ -5,27 +5,25 @@ import { Injectable } from '@angular/core';
 })
 export class DropdownService {
   private typeOfPastry = [
-    { id: 1, itemName: "Tarta" },
-    { id: 2, itemName: "Postre" },
-    { id: 3, itemName: "Postre" },
-    { id: 4, itemName: "Helado" },
-    { id: 5, itemName: "Pastas" },
-    { id: 6, itemName: "Chocolate" }
+    { id: 1, itemName: "Tarta", value: "cake" },
+    { id: 2, itemName: "Postre", value: 'dessert' },
+    { id: 4, itemName: "Helado", value: 'iceCream' },
+    { id: 5, itemName: "Pastas", value: 'teaBiscuit' },
+    { id: 6, itemName: "Chocolate", value: 'chocolate' }
   ];
   private allergies = [
-    { id: 1, itemName: "Gluten" },
-    { id: 2, itemName: "Huevo" },
-    { id: 3, itemName: "Frutos Secos" },
-    { id: 4, itemName: "Cacahuete" },
-    { id: 5, itemName: "Soja" },
-    { id: 6, itemName: "Leche" },
+    { id: 1, itemName: "Gluten", value: 'gluten' },
+    { id: 2, itemName: "Huevo",  value: 'egg' },
+    { id: 3, itemName: "Frutos Secos", value: 'nuts' },
+    { id: 4, itemName: "Cacahuete", value: 'peanuts' },
+    { id: 5, itemName: "Soja", value: 'soja' },
+    { id: 6, itemName: "Leche", value: 'milk' },
   ];
   private ocassion = [
-    { id: 1, itemName: "Cumpleaños" },
-    { id: 2, itemName: "Boda" },
-    { id: 3, itemName: "Baby Shower" },
-    { id: 4, itemName: "Comunión" },
-    { id: 5, itemName: "Con Amigos" }
+    { id: 1, itemName: "Cumpleaños", value: 'birthday' },
+    { id: 2, itemName: "Boda", value: 'wedding' },
+    { id: 3, itemName: "Baby Shower", value: 'babyShower' },
+    { id: 5, itemName: "Con Amigos", value: 'friends' }
   ];
 
   constructor() { }

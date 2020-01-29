@@ -5,7 +5,7 @@
       <h2 class="filter__title">Tipo de dulce</h2>
       <div class="form-control__checkbox " *ngFor="let filter of pastryFilterListTypeOf" (change)="updateListTypeOf($event)">
         <label>
-          <input type="checkbox" aria-describedby="checkboxNote" [id]="filter.id" [value]="filter.value">
+          <input type="checkbox" aria-describedby="checkboxNote" [id]="filter.id" [value]="filter.value" [checked]="typeOfChecked(filter.value)">
           <span class="form-control__indicator"></span>
           <span class="form-control__description">{{filter.name}}</span>
         </label>
@@ -13,7 +13,7 @@
       <h2 class="filter__title">¿Alergías y/o intolerancias?</h2>
       <div class="form-control__checkbox " *ngFor="let filter of pastryFilterListAllergies" (change)="updateListAllergies($event)">
         <label>
-          <input type="checkbox" aria-describedby="checkboxNote" [id]="filter.id" [value]="filter.value">
+          <input type="checkbox" aria-describedby="checkboxNote" [id]="filter.id" [value]="filter.value"  [checked]="allergiesChecked(filter.value)">
           <span class="form-control__indicator"></span>
           <span class="form-control__description">{{filter.allergy}}</span>
         </label>
@@ -21,7 +21,7 @@
       <h2 class="filter__title">Ocasión</h2>
       <div class="form-control__checkbox " *ngFor="let filter of pastryFilterListOcassion" (change)="updateListOcassion($event)">
         <label>
-          <input type="checkbox" aria-describedby="checkboxNote" [id]="filter.id" [value]="filter.value">
+          <input type="checkbox" aria-describedby="checkboxNote" [id]="filter.id" [value]="filter.value" [checked]="ocassionChecked(filter.value)">
           <span class="form-control__indicator"></span>
           <span class="form-control__description">{{filter.ocassion}}</span>
         </label>

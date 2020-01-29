@@ -96,18 +96,11 @@ export class CartComponent implements OnInit {
       key: 'pk_test_aeUUjYYcx4XNfKVW60pmHTtI',
       locale: 'ES',
       currency: '€',
-      token: function (token: any) {
-        // You can access the token ID with `token.id`.
-        // Get the token ID to your server-side code for use.
-        console.log(token)
-        alert('Token Created!!');
-        let data = {'currency': 'ES'}
-      }
     });
 
     handler.open({
       name: 'PastryHome',
-      currency: 'ES',
+      currency: "EUR",
       amount: amount * 100
     });
 

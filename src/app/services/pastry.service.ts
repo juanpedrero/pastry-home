@@ -127,7 +127,7 @@ export class PastryService {
       { allergy: 'Frutos Secos', value: 'nuts', id: '8' },
       { allergy: 'Cacahuete', value: 'peanuts', id: '9' },
       { allergy: 'Soja', value: 'soja', id: '10' },
-      { allergy: 'Leche', vaue: 'milk', id: '11' }
+      { allergy: 'Leche', value: 'milk', id: '11' }
     ]
   }
 
@@ -162,9 +162,9 @@ export class PastryService {
           'huevos, ',
           'leche, '
         ],
-        typeOf: ['cake'],
+        typeOf: ['dessert'],
         allergy: [
-          'egg'
+          'gluten'
         ],
         ocassion: [
           'birthday',
@@ -327,7 +327,7 @@ export class PastryService {
         rating: 2,
         price: 8,
         categories: [
-          'Frutas',
+
           'Vegano',
           'Sin Gluten'
         ],
@@ -386,7 +386,7 @@ export class PastryService {
         rating: 3.5,
         price: 22,
         categories: [
-          'Sin gluten',
+          'Frutas'
         ],
         ingredients: [
           'Harina, ',
@@ -540,58 +540,141 @@ export class PastryService {
         quantity: 1
 
       },
-      // {
-      //   id: 15,
-      //   img: '../assets/images/strawberrie.jpg',
-      //   name: "Tarta de Fresa",
-      //   idAuthor: 1,
-      //   description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
-      //   rating: 3.5,
-      //   price: 17,
-      //   categories: [
-      //     'Sin gluten',
-      //   ],
-      //   ingredients: [
-      //     'Harina, ',
-      //     'huevos y ',
-      //     'leche',
-      //   ],
-      //   typeOf: [],
-      //   allergy: [
-      //     'gluten'
-      //   ],
-      //   ocassion: [
-      //     'Con amigos',
-      //   ],
-      //   quantity: 1
+      {
+        id: 15,
+        img: '../assets/images/helado_mora.jpg',
+        name: "Helado de mora",
+        idAuthor: 1,
+        description: "Helado de moras silvestres, sin azúcar y con un toque ácido que hará disfrutar a tu pladar. Elaborado con leche de primera calidad, te sorprenderá por su increible untuosidad",
+        rating: 3.5,
+        price: 6,
+        categories: [
+          'Frutas'
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos y ',
+          'leche',
+        ],
+        typeOf: [],
+        allergy: [
+          'milk'
+        ],
+        ocassion: [
+          'Con amigos',
+        ],
+        quantity: 1
 
-      // },
-      // {
-      //   id: 16,
-      //   img: '../assets/images/strawberrie.jpg',
-      //   name: "Tarta de Fresa",
-      //   idAuthor: 1,
-      //   description: "Lorem fistrum llevame al sircoo ese que llega al ataquerl papaar papaar la caidita. Me cago en tus muelas quietooor pecador está la cosa muy malar a wan quietooor qué dise usteer la caidita. Qué dise usteer la caidita torpedo diodenoo pecador no puedor. Apetecan está la cosa muy malar torpedo a peich llevame al sircoo amatomaa jarl llevame al sircoo benemeritaar. Torpedo ese que llega condemor sexuarl torpedo torpedo condemor a gramenawer por la gloria de mi madre a wan te voy a borrar el cerito. A peich te va a hasé pupitaa a gramenawer se calle ustée jarl a peich al ataquerl de la pradera. Diodeno papaar papaar al ataquerl a peich la caidita diodeno. De la pradera qué dise usteer jarl diodeno te va a hasé pupitaa va usté muy cargadoo. Sexuarl fistro a gramenawer a peich hasta luego Lucas de la pradera te va a hasé pupitaa la caidita.",
-      //   rating: 3.5,
-      //   price: 17,
-      //   categories: [
-      //     'Sin gluten',
-      //   ],
-      //   ingredients: [
-      //     'Harina, ',
-      //     'huevos y ',
-      //     'leche',
-      //   ],
-      //   typeOf: ['cake', 'chocolate'],
-      //   allergy: [
-      //     'gluten'
-      //   ],
-      //   ocassion: [
-      //     'friends',
-      //   ],
-      //   quantity: 1
-
-      // },
+      },
+      {
+        id: 16,
+        img: '../assets/images/magdalena_arandano.jpg',
+        name: "Magdalena de arándanos (ud)",
+        idAuthor: 1,
+        description: "Magdalenas recién horneadas con un toque de vainilla y arándanos negros. Para los amantes de los sabores ácidos y dulces. ¡No podrás resistirte!",
+        rating: 4,
+        price: 1.5,
+        categories: [
+          'Frutas'
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos, ',
+          'leche',
+          'y arándanos'
+        ],
+        typeOf: ['dessert'],
+        allergy: [
+          'gluten',
+          'millk'
+        ],
+        ocassion: [
+          'friends',
+        ],
+        quantity: 1
+      },
+      {
+        id: 17,
+        img: '../assets/images/tartaleta_fruta.jpg',
+        name: "Tartaleta de frutas (ud)",
+        idAuthor: 1,
+        description: "Una varidada selección de frutas de temporada con una base de crema pastelera. Base de hojaldre de la mejor calidad para darle ese toque crujiente y aireado a este delicioso dulce.",
+        rating: 5,
+        price: 4,
+        categories: [
+          'Frutas'
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos, ',
+          'leche',
+          'y arándanos'
+        ],
+        typeOf: ['dessert'],
+        allergy: [
+          'gluten',
+          'millk'
+        ],
+        ocassion: [
+          'friends',
+        ],
+        quantity: 1
+      },
+      {
+        id: 18,
+        img: '../assets/images/tartita_maracuya.jpg',
+        name: "Tartita de maracuyá (ud)",
+        idAuthor: 5,
+        description: "Delicioso maracuyá maduro con intenso dulzor, sobre una base de crema pastelera con toques ácidos para disfrutar de los contrastes más exóticos. ",
+        rating: 5,
+        price: 5,
+        categories: [
+          'Fruta',
+        ],
+        ingredients: [
+          'Harina, ',
+          'huevos, ',
+          'leche, ',
+          'levadura fresca ',
+          'y maracuýa'
+        ],
+        typeOf: ['dessert'],
+        allergy: [
+          'gluten',
+          'millk'
+        ],
+        ocassion: [
+          'babyShower',
+        ],
+        quantity: 1
+      },
+      {
+        id: 19,
+        img: '../assets/images/helado_fresa.jpg',
+        name: "Helado de fresas",
+        idAuthor: 5,
+        description: "Fresas de las mejores huertas se unen en esta incomparable creación para refrescar los días de verano. Elaboración artesanal sin colorantes ni conservantes ",
+        rating: 5,
+        price: 5,
+        categories: [
+          'Fruta',
+        ],
+        ingredients: [
+          'huevos, ',
+          'leche, ',
+          'fresa ',
+          'y azúcar'
+        ],
+        typeOf: ['iceCream'],
+        allergy: [
+          'gluten',
+          'millk'
+        ],
+        ocassion: [
+          'friends',
+        ],
+        quantity: 1
+      },
     ];
   }
 }
